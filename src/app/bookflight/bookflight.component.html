@@ -1,0 +1,45 @@
+<!-- <div>
+  <ul>
+    <li *ngFor="let airport of airports">
+      {{airport.name}}
+    </li>
+  </ul>
+
+  <ul>
+    <li *ngFor="let flight of flights">
+      {{flight.duration}}
+    </li>
+  </ul>
+
+  <ul>
+    <li *ngFor="let plane of planes">
+      {{plane.brand}}
+    </li>
+  </ul>
+
+  <ul>
+    <li *ngFor="let passenger of passengers">
+      {{passenger.name}}
+    </li>
+  </ul>
+
+</div> -->
+
+<input [(ngModel)]="airport.name"><button (click)="addAirport($event)">Add airplane</button>
+
+<form #userForm="ngForm">
+  {{userForm.value | json}}
+  <div class="form-group">
+    <label>Origin </label>
+    <select [(ngModel)]='originSelected' name="origin" ngModel="select">
+      <option selected name="origin" value={{airport.id}} *ngFor="let airport of airports">{{airport.name}}</option>
+    </select>
+  </div>
+  <div class="form-group">
+    <label>Destination </label>
+    <select [(ngModel)]='destinationSelected' name="Destination" ngModel="select">
+      <option name="Destination" value={{airport.id}} *ngFor="let airport of airports">{{airport.name}}</option>
+    </select>
+  </div>
+  <button type="submit" (click)="addFlight(userForm)">Submit Flight</button>
+</form>
