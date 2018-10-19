@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule, Routes } from '@angular/router';
-import { AppComponent } from './app.component';
+
 import { AddAirportComponent } from './add-airport/add-airport.component';
 import { LoginComponent } from './login/login.component';
 import { AddTrajectComponent } from './add-traject/add-traject.component';
@@ -10,6 +10,7 @@ import { LandingPlannerComponent } from './landing-planner/landing-planner.compo
 // import { SearchComponent } from './search/search.component'; //Should be added later
 // import { AddAirplaneComponent } from './add-airplane/add-airplane.component'; //Should be added by Wouter
 import { AddTripComponent } from './add-trip/add-trip.component';
+import { BookflightComponent } from './bookflight/bookflight.component';
 
 const routes = [ {path: 'addairport', component: AddAirportComponent},
 {path: 'login', component: LoginComponent}, 
@@ -20,6 +21,7 @@ const routes = [ {path: 'addairport', component: AddAirportComponent},
 {path: 'landingplanner', component: LandingPlannerComponent },
 // {path: 'addairplane', component: AddAirplaneComponent},
 {path: 'addtrip', component: AddTripComponent},
+{path:'bookflight', component: BookflightComponent},
 
 // {path: 'nav2', component: AppComponent},
 {path: '', redirectTo: '/landingplanner', pathMatch: 'full'},

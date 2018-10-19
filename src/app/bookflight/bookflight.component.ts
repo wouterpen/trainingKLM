@@ -29,10 +29,10 @@ export class BookflightComponent implements OnInit {
         this.airports = data;
       })
 
-    // this.flightService.getFlights().subscribe(
-    //   data => {
-    //     this.flights = data;
-    //   })
+    this.flightService.getFlights().subscribe(
+      data => {
+        this.flights = data;
+      })
 
     this.passengerService.getPassengers().subscribe(
       data => {
