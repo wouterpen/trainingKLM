@@ -10,9 +10,12 @@ import { HttpClientModule } from '@angular/common/http';
 import { AddTrajectComponent } from './add-traject/add-traject.component';
 import { AddAirportComponent } from './add-airport/add-airport.component';
 
+import { NavigationComponent } from './navigation/navigation.component';
+
 @NgModule({
   declarations: [
     AppComponent,
+    NavigationComponent,
     LoginComponent,
     BookflightComponent,
     AddTrajectComponent,
