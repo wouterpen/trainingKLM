@@ -1,0 +1,27 @@
+.container{
+    width: 100%;
+    text-align: center;
+}
+
+.add-traject-form{
+    margin: 0 auto;
+    padding: 5% 5%;
+    width: 20%;
+    border: 10px solid gray;
+}
+label{
+    float: left;
+}
+.option-label{
+    float: right;
+}
+
+.form-group{
+    width: 200px;
+    float: left;
+}
+input{
+    width: 120px;
+    border: auto;
+    border-radius: 10px;
+}

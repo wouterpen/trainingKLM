@@ -28,6 +28,7 @@ export class AirportServiceService {
   };
 
   addAirport(nameAirport: any){
+    console.log('namePort=',nameAirport)
     return this
     .httpClient
     .post<any>(
