@@ -7,8 +7,6 @@ import { LoginComponent } from './login/login.component';
 import { AddTrajectComponent } from './add-traject/add-traject.component';
 import { LandingAdminComponent } from './landing-admin/landing-admin.component';
 import { LandingPlannerComponent } from './landing-planner/landing-planner.component';
-// import { SearchComponent } from './search/search.component'; //Should be added later
-// import { AddAirplaneComponent } from './add-airplane/add-airplane.component'; //Should be added by Wouter
 import { AddTripComponent } from './add-trip/add-trip.component';
 
 const routes = [ {path: 'addairport', component: AddAirportComponent},
@@ -28,7 +26,7 @@ const routes = [ {path: 'addairport', component: AddAirportComponent},
 
 
 
-@NgModule({
+@NgModule({ 
   imports: [
     CommonModule,
     RouterModule.forRoot(routes)

@@ -3,6 +3,8 @@ import { Component, OnInit } from '@angular/core';
 import { FlightServiceService } from '../services/flight-service.service';
 import { PassengerServiceService } from '../services/passenger-service.service';
 import { AirportServiceService } from '../services/airport-service.service';
+import { LandingPlannerComponent } from '../landing-planner/landing-planner.component';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-add-traject',
@@ -13,7 +15,9 @@ export class AddTrajectComponent implements OnInit {
 
   constructor(private flightService: FlightServiceService,
     private airportService: AirportServiceService,
-    private passengerService: PassengerServiceService) { }
+    private passengerService: PassengerServiceService,
+    private router: Router) {}
+
   private originSelected: number;
   private destinationSelected: number;
 
@@ -39,9 +43,8 @@ export class AddTrajectComponent implements OnInit {
     this.flightService.addFlight(flightAddForm)
     .subscribe(
       data => console.log(data)
-    )
+    );
+    this.router.navigate(['/landingplanner']);
   }
-
-
 }
 
