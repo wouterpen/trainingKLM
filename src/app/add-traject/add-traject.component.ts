@@ -14,8 +14,8 @@ export class AddTrajectComponent implements OnInit {
   constructor(private flightService: FlightServiceService,
     private airportService: AirportServiceService,
     private passengerService: PassengerServiceService) { }
-  private originSelected: number;
-  private destinationSelected: number;
+   originSelected: number;
+   destinationSelected: number;
 
   airports = [];
 
@@ -26,7 +26,7 @@ export class AddTrajectComponent implements OnInit {
     this.airportService.getAirports().subscribe(
       data => {
         this.airports = data;
-      })
+      });
   }
 
   addFlight(userForm) {
@@ -35,11 +35,11 @@ export class AddTrajectComponent implements OnInit {
       'arrivalAirport': userForm.value.arrivalAirport,
       'inactiveStartdate': userForm.value.inactiveStartdate,
       'inactiveEnddate': userForm.value.inactiveEnddate
-    }
+    };
     this.flightService.addFlight(flightAddForm)
-    .subscribe(
-      data => console.log(data)
-    )
+      .subscribe(
+        data => console.log(data)
+      );
   }
 
 
