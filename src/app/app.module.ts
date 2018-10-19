@@ -11,6 +11,8 @@ import { AddTrajectComponent } from './add-traject/add-traject.component';
 import { AddAirportComponent } from './add-airport/add-airport.component';
 
 import { NavigationComponent } from './navigation/navigation.component';
+import { LandingAdminComponent } from './landing-admin/landing-admin.component';
+import { LandingPlannerComponent } from './landing-planner/landing-planner.component';
 import { AddTripComponent } from './add-trip/add-trip.component';
 
 @NgModule({
@@ -21,6 +23,8 @@ import { AddTripComponent } from './add-trip/add-trip.component';
     BookflightComponent,
     AddTrajectComponent,
     AddAirportComponent,
+    LandingAdminComponent,
+    LandingPlannerComponent,
     AddTripComponent
   ],
   imports: [

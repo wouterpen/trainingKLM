@@ -1,0 +1,30 @@
+<div class="container">
+  
+<h1>Planner Landing Page</h1>
+<table id="plannerTable">
+  <tr>
+    <!-- Links need to be verified -->
+    <th>Trajects<button  class="addNew">Add</button></th> 
+    <th>Trips <button class="addNew"  >Add</button></th>
+  </tr>
+  <tr>
+    <td class="displayList">
+      <ul>
+        <li *ngFor="let flight of flights">DEP: {{flight.departureAirport.name}} - ARR: {{flight.arrivalAirport.name}}<br>
+        Inactive from: {{flight.inactiveStartdate}} until {{flight.inactiveEnddate}} </li>
+      </ul>
+    </td>
+    <td class="displayList">
+      <ul>
+        <!-- When trips are created duplicate above LI item for trips instead of flights -->
+          <li>Hello</li>
+        </ul>
+    </td>
+  </tr>
+</table>
+              
+  <!-- <a routerLink='/addairport' class="button button2">Register airport</a>
+  <a routerLink='/addairplane' class="button button1">Register airplane</a>
+  <a routerLink='/landingadmin' class="button button1">Back</a> -->
+  
+</div>
