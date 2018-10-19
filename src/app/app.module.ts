@@ -13,6 +13,10 @@ import { AddAirportComponent } from './add-airport/add-airport.component';
 import { NavigationComponent } from './navigation/navigation.component';
 import { AccountsComponent } from './accounts/accounts.component';
 import { AccountServiceService } from './services/account-service.service';
+import { LandingAdminComponent } from './landing-admin/landing-admin.component';
+import { LandingPlannerComponent } from './landing-planner/landing-planner.component';
+import { AddTripComponent } from './add-trip/add-trip.component';
+import { AddPlaneComponent } from './add-plane/add-plane.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +26,11 @@ import { AccountServiceService } from './services/account-service.service';
     BookflightComponent,
     AddTrajectComponent,
     AddAirportComponent,
-    AccountsComponent
+    AccountsComponent,
+    LandingAdminComponent,
+    LandingPlannerComponent,
+    AddTripComponent,
+    AddPlaneComponent
   ],
   imports: [
     BrowserModule,

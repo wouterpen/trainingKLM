@@ -1,0 +1,81 @@
+.button {
+    background-color: #4CAF50; /* Green */
+    border: none;
+    color: white;
+    padding: 16px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+    cursor: pointer;
+    border-radius: 8px;
+ }
+ 
+ .button1 {
+    background-color: white;
+    color: black;
+    border: 2px solid #00A1E4;
+ }
+ 
+ .button1:hover {
+    background-color: #00A1E4;
+    color: white;
+ }
+ 
+ .button2 {
+    background-color: white;
+    color: black;
+    border: 2px solid #FF7800;
+ }
+ 
+ .button2:hover {
+    background-color: #FF7800;
+    color: white;
+ }
+
+ .container{
+    width: 100%;
+    text-align: center;
+}
+
+#plannerTable {
+    width: 1000px;
+    margin:auto;
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+
+#plannerTable td, th {
+    width: 495px;
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+ 
+.addNew {
+    margin-left:30px;
+}
+
+ul {
+    float:top;
+    list-style-type: none;
+    margin:0;padding:0;
+}
+
+li {
+    background: #fff;
+    border-radius: 8px;
+    margin:4px;
+    padding-left:10px;
+    vertical-align: middle;
+    text-align: left;
+    border: 1px solid black;
+    height:45px;
+}
+
+.displayList {
+    height:400px;
+    /* position: absolute;  Can't use this right now, but use it later to adjust the list items to the top*/
+}

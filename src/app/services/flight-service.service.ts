@@ -11,29 +11,34 @@ const httpOptions = {
 @Injectable({
   providedIn: 'root'
 })
+
 export class FlightServiceService {
   private url: string = "http://localhost:8082/api";
-  private endpointFlights: string = "airtraffic/flights";
-  private endpointFlightAdd: string = "airtraffic/flight/add";
-
-
-
+  private endpointFlights: string = "trajects";
 
   constructor(private httpClient: HttpClient) { }
-  getFlights(): Observable<{any}[]> {
+  getFlights(): Observable<{ any }[]> {
     return this
       .httpClient
       .get<any[]>(`${this.url}/${this.endpointFlights}`)
   };
 
-  addFlight(nameFlight: any){
+  addFlight(nameFlight: any) {
+
+    const flightForm = {
+      "inactiveStartdate": nameFlight.inactiveStartdate,
+      "inactiveEnddate": nameFlight.inactiveEnddate
+    }
+
+    const endpointFlightAdd = `trajects/add/departure/${nameFlight.departureAirport}/arrival/${nameFlight.arrivalAirport}`
+
     return this
-    .httpClient
-    .post<any>(
-      `${this.url}/${this.endpointFlightAdd}`,
-      nameFlight,
-      httpOptions
-    )
+      .httpClient
+      .post<any>(
+        `${this.url}/${endpointFlightAdd}`,
+        flightForm,
+        httpOptions
+      )
   };
 
 }
