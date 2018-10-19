@@ -11,6 +11,8 @@ import { AddTrajectComponent } from './add-traject/add-traject.component';
 import { AddAirportComponent } from './add-airport/add-airport.component';
 
 import { NavigationComponent } from './navigation/navigation.component';
+import { LandingAdminComponent } from './landing-admin/landing-admin.component';
+import { LandingPlannerComponent } from './landing-planner/landing-planner.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +21,9 @@ import { NavigationComponent } from './navigation/navigation.component';
     LoginComponent,
     BookflightComponent,
     AddTrajectComponent,
-    AddAirportComponent
+    AddAirportComponent,
+    LandingAdminComponent,
+    LandingPlannerComponent
   ],
   imports: [
     BrowserModule,
