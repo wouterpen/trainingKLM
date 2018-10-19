@@ -5,16 +5,24 @@ import { FormsModule} from '@angular/forms';
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './/app-routing.module';
 import { LoginComponent } from './login/login.component';
+import { BookflightComponent } from './bookflight/bookflight.component';
+import { HttpClientModule } from '@angular/common/http';
+import { AddTrajectComponent } from './add-traject/add-traject.component';
+import { AddAirportComponent } from './add-airport/add-airport.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    LoginComponent
+    LoginComponent,
+    BookflightComponent,
+    AddTrajectComponent,
+    AddAirportComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

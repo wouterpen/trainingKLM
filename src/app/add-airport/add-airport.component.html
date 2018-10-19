@@ -1,0 +1,10 @@
+<div class="container">
+  <h1>Register Airport </h1>
+  <form class="add-traject-form" #airportForm="ngForm">
+    <div class="form-group">
+      <label>Airport: </label>
+      <input ngModel name="airport">
+    </div>
+    <button type="submit" (click)="addAirport(airportForm)">Add airport</button>
+  </form>
+</div>
