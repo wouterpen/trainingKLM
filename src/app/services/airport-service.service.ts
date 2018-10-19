@@ -14,8 +14,8 @@ const httpOptions = {
 })
 export class AirportServiceService {
   private url: string = "http://localhost:8082/api";
-  private endpointAirport: string = "airtraffic/airports";
-  private endpointAirportAdd: string = "airtraffic/airport/add";
+  private endpointAirport: string = "airports";
+  private endpointAirportAdd: string = "airports";
 
 
   constructor(private httpClient: HttpClient) { }
@@ -28,7 +28,6 @@ export class AirportServiceService {
   };
 
   addAirport(nameAirport: any){
-    console.log('namePort=',nameAirport)
     return this
     .httpClient
     .post<any>(

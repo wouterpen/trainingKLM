@@ -11,6 +11,7 @@ import { AddTrajectComponent } from './add-traject/add-traject.component';
 import { AddAirportComponent } from './add-airport/add-airport.component';
 
 import { NavigationComponent } from './navigation/navigation.component';
+import { AddTripComponent } from './add-trip/add-trip.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { NavigationComponent } from './navigation/navigation.component';
     LoginComponent,
     BookflightComponent,
     AddTrajectComponent,
-    AddAirportComponent
+    AddAirportComponent,
+    AddTripComponent
   ],
   imports: [
     BrowserModule,
