@@ -1,0 +1,58 @@
+
+.resize{
+
+    width: 10%;
+    height: 10%;
+}
+
+
+.div-style
+{
+  position: absolute;
+  margin: auto;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: 400px;
+  height: 400px;
+  background-color: #36454f;
+  border-radius: 30px;
+  opacity: 0.6;
+}
+
+input{
+  padding:8px;
+  display:block;
+  border:none;
+  border-bottom:2px solid #ccc;
+  width:50%;
+  background-color: #36454f;
+  opacity: 2;
+}
+
+::placeholder { 
+  color: white;
+  opacity: 1; 
+}
+
+label{
+
+  color: white;
+
+}
+
+
+button{
+  padding: 16px;
+  border-radius: 10px;
+}
+
+button:hover{
+  border:6px;
+  padding: 16px;
+  background-color: lightcoral
+
+}
+
+
