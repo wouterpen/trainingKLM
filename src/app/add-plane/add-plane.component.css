@@ -7,9 +7,10 @@
 	margin-block-start: 5%;
 	margin-inline-start: 30%;
 	margin-inline-end: 30%;
+
   }
   .div-style a{
-      margin-left: 170px;
+
 	color: #FFFFFF;
 	text-align: center;
 	padding: 8px 30px;
@@ -53,3 +54,5 @@
   ::placeholder {
 	color: #00618A;
   }
+
+ 

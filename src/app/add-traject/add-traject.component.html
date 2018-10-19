@@ -1,5 +1,9 @@
 <div class="container">
-  <h1>Register Traject </h1>
+    <app-landing-admin></app-landing-admin>
+    <div class="div-style"> <br>
+      <div class="title">
+          Register Traject <br><br>
+        </div>
   <form class="add-traject-form" #userForm="ngForm">
     <div class="form-group">
       <label>From: </label>
@@ -20,7 +24,17 @@
     <div class="form-group">
         <label>End date:</label>
         <input class="option-label" ngModel name="inactiveEnddate">
+      <label>startdate:</label>
+      <input placeholder="YYYY-MM-DD" class="option-label" ngModel name="inactiveStartdate">
+    </div>
+    <div class="form-group">
+        <label>endDate:</label>
+        <input placeholder="YYYY-MM-DD" class="option-label" ngModel name="inactiveEnddate">
       </div>
-    <button type="submit" (click)="addFlight(userForm)">Submit Flight</button>
+    <a class="registerbutton" type="submit" (click)="addFlight(userForm)">Submit Flight</a>
   </form>
 </div>
+  </div>
+</div>
+
+

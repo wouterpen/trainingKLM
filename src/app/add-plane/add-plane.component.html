@@ -1,0 +1,18 @@
+<div class="container">
+  <app-landing-admin></app-landing-admin>
+  <div class="div-style"> <br>
+
+    <div class="title">
+      Register Airplane <br><br>
+    </div>
+    <form class="add-traject-form" #aircraftForm="ngForm">
+      <div class="form-group">
+        <input placeholder="Model" ngModel name="id"><br><br>
+      </div>
+      <div class="form-group">
+        <input placeholder="Name" ngModel name="brand"><br><br>
+      </div>
+      <a class="registerbutton" type="submit" (click)="addAircraft(aircraftForm)">Add Airplane</a>
+    </form>
+  </div>
+</div>
