@@ -43,7 +43,9 @@ export class LoginComponent implements OnInit {
     private accountService: AccountServiceService
   ) {}
 
-  accounts: Account[];
+  accounts =[]; 
+  
+// Account[];
 
   ngOnInit() {
     this.accountService.getAccounts().subscribe(

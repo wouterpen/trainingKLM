@@ -5,65 +5,71 @@
   width: 25%;
 }
 
-
 .div-style{
-position: absolute;
-margin: auto;
-top: 0;
-right: 0;
-bottom: 0;
-left: 0;
-width: 600px;
-height: 500px;
-background-color: #FFFFFF;
-border-radius: 8px;
-border: #00A1E4;
-border-style: solid;
-border-width: 3px;
-/* opacity: 0.6; */
+	background-color: #FFFFFF;
+	border-radius: 8px;
+	border: #00A1E4;
+	border-style: solid;
+	border-width: 3px;
+	height:450px;
+	width:600px;
+	position:absolute;
+	top:50%;
+	left:50%;
+	margin-left:-300px;
+	margin-top:-250px;
+}
+
+.container {
+	width: 100%;
+	height:90vh; 
+	position:relative;
 }
 
 input{
-padding:8px;
-display:block;
-border:none;
-width:50%;
-background-color: #FFFFFF;
-border-width: 2px;
-border-color: #00A1E4;
-border-style: solid;
-border-radius: 5px;
-margin-left: 25%;
+  padding:8px;
+  display:block;
+  border:none;
+  width:50%;
+  background-color: #FFFFFF;
+  border-width: 2px;
+  border-color: #00A1E4;
+  border-style: solid;
+  border-radius: 5px;
+  margin-left: 25%;
 }
 
 ::placeholder {
-color: #00618A;
+  color: #00618A;
 }
 
 .forgotpassword{
-text-align: center;
-font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-font-size: 9px;
+  text-align: center;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-size: 9px;
+  margin-bottom:30px;
 }
 
 .loginbutton{
-color: #00A1E4;
-text-align: center;
-padding: 14px 16px;
-text-decoration: none;
-font-size: 24px;
-border-radius: 8px;
-margin-left: 43%;
+    color: #FFFFFF;
+    width:115px;
+    height:35px;
+    margin-top:80px;
+    line-height: 35px;
+    text-decoration: none;
+    font-size: 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: #FF7800;
+    font-family: 'Gill Sans', 'Gill Sans MT', 'Calibri', 'Trebuchet MS', sans-serif;
+    text-align: center;
+    margin:0 auto;
+    display:block;
 }
-
-.loginbutton a:hover {
-background-color: #FF7800;
-color: #FFFFFF;
-border-radius: 8px;
-}
-
-.loginbutton a.active {
-background-color: #00618A;
-color: white;
-border-radius: 8px;
+   
+.loginbutton:hover {
+  background-color: #00A1E4;
+  color: #FFFFFF;
+  border-radius: 5px;
+  cursor: pointer;
 }
