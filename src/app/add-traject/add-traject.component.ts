@@ -14,8 +14,8 @@ export class AddTrajectComponent implements OnInit {
   constructor(private flightService: FlightServiceService,
     private airportService: AirportServiceService,
     private passengerService: PassengerServiceService) { }
-  private originSelected: number;
-  private destinationSelected: number;
+   originSelected: number;
+   destinationSelected: number;
 
   airports = [];
 

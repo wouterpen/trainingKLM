@@ -17,15 +17,6 @@ export class AccountsComponent implements OnInit {
   constructor(private accountService: AccountServiceService) { }
 
   ngOnInit() {
-
-    // this.accountService.getById(this.accountService.loginAccount.id).
-    // subscribe(
-    //   data => { this.account = data;
-        //console.log(this.account);
-    //   }
-
-    // );
-
   }
 
 
@@ -41,11 +32,11 @@ export class AccountsComponent implements OnInit {
       'phoneNumber': userForm.value.phoneNr,
       'email': userForm.value.emailAdress,
       'password': userForm.value.passWord,
-    }
-    console.log(userAddForm)
+    };
+
     this.accountService.addUser(userAddForm).subscribe(
-      data => console.log('data',data)
-    )
+      data => console.log('data', data)
+    );
   }
 
   // onSubmit(accountForm: NgForm) {

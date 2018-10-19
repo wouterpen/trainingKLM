@@ -13,24 +13,24 @@ const httpOptions = {
 })
 
 export class FlightServiceService {
-  private url: string = "http://localhost:8082/api";
-  private endpointFlights: string = "trajects";
+  private url = 'http://localhost:8082/api';
+  private endpointFlights = 'trajects';
 
   constructor(private httpClient: HttpClient) { }
   getFlights(): Observable<{ any }[]> {
     return this
       .httpClient
-      .get<any[]>(`${this.url}/${this.endpointFlights}`)
-  };
+      .get<any[]>(`${this.url}/${this.endpointFlights}`);
+  }
 
   addFlight(nameFlight: any) {
 
     const flightForm = {
-      "inactiveStartdate": nameFlight.inactiveStartdate,
-      "inactiveEnddate": nameFlight.inactiveEnddate
-    }
+      'inactiveStartdate': nameFlight.inactiveStartdate,
+      'inactiveEnddate': nameFlight.inactiveEnddate
+    };
 
-    const endpointFlightAdd = `trajects/add/departure/${nameFlight.departureAirport}/arrival/${nameFlight.arrivalAirport}`
+    const endpointFlightAdd = `trajects/add/departure/${nameFlight.departureAirport}/arrival/${nameFlight.arrivalAirport}`;
 
     return this
       .httpClient
@@ -38,7 +38,7 @@ export class FlightServiceService {
         `${this.url}/${endpointFlightAdd}`,
         flightForm,
         httpOptions
-      )
-  };
+      );
+  }
 
 }

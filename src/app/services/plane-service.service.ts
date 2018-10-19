@@ -12,27 +12,25 @@ const httpOptions = {
   providedIn: 'root'
 })
 export class PlaneServiceService {
-  private url: string = "http://localhost:8082/api";
-  private endpointPlanes: string = "planes";
-  private endpointAddPlanes: string = "planes";
+  private url = 'http://localhost:8082/api';
+  private endpointPlanes = 'planes';
+  private endpointAddPlanes = 'planes';
 
 
   constructor(private httpClient: HttpClient) { }
-  getPlanes(): Observable<{any}[]> {
+  getPlanes(): Observable<{ any }[]> {
     return this
       .httpClient
-      .get<any[]>(`${this.url}/${this.endpointPlanes}`)
-  };
-
-  addAircraft(nameAircraft: any){
-    return this
-    .httpClient
-    .post<any>(
-      `${this.url}/${this.endpointAddPlanes}`,
-      nameAircraft,
-      httpOptions
-    )
+      .get<any[]>(`${this.url}/${this.endpointPlanes}`);
   }
 
-
+  addAircraft(nameAircraft: any) {
+    return this
+      .httpClient
+      .post<any>(
+        `${this.url}/${this.endpointAddPlanes}`,
+        nameAircraft,
+        httpOptions
+      );
+  }
 }

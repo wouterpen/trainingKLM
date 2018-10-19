@@ -15,9 +15,9 @@ export class AccountServiceService {
   // private endpoint  = 'accounts';
   // loginAccount =  {id : 1};
 
-  private url: string = 'http://localhost:8082/api';
-  private endpointUser: string = 'accounts';
-  private endpointUserAdd: string = 'accounts';
+  private url = 'http://localhost:8082/api';
+  private endpointUser = 'accounts';
+  private endpointUserAdd = 'accounts';
 
 
   constructor(private httpClient: HttpClient) { }
@@ -28,22 +28,21 @@ export class AccountServiceService {
   //     .get<Account>(`${this.url}/${this.endpoint}/` + id);
   // }
 
-  getUsers(): Observable<{any}[]> {
+  getUsers(): Observable<{ any }[]> {
     return this
       .httpClient
-      .get<any[]>(`${this.url}/${this.endpointUser}`)
-  };
+      .get<any[]>(`${this.url}/${this.endpointUser}`);
+  }
 
 
-  addUser(infoUser: any){
-    console.log('namePort=',infoUser)
+  addUser(infoUser: any) {
     return this
-    .httpClient
-    .post<any>(
-      `${this.url}/${this.endpointUserAdd}`,
-      infoUser,
-      httpOptions
-    )
+      .httpClient
+      .post<any>(
+        `${this.url}/${this.endpointUserAdd}`,
+        infoUser,
+        httpOptions
+      );
   }
 
 }
