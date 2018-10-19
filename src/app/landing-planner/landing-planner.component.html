@@ -1,30 +1,30 @@
 <div class="container">
-  
-<h1>Planner Landing Page</h1>
-<table id="plannerTable">
-  <tr>
-    <!-- Links need to be verified -->
-    <th>Trajects<a routerLink="/addtraject" class="addNew">Add</a></th> 
-    <th>Trips <button class="addNew"  >Add</button></th>
-  </tr>
-  <tr>
-    <td class="displayList">
-      <ul>
-        <li *ngFor="let flight of flights">DEP: {{flight.departureAirport.name}} - ARR: {{flight.arrivalAirport.name}}<br>
-        Inactive from: {{flight.inactiveStartdate}} until {{flight.inactiveEnddate}} </li>
-      </ul>
-    </td>
-    <td class="displayList">
-      <ul>
-        <!-- When trips are created duplicate above LI item for trips instead of flights -->
-          <li>Hello</li>
-        </ul>
-    </td>
-  </tr>
-</table>
-              
-  <!-- <a routerLink='/addairport' class="button button2">Register airport</a>
-  <a routerLink='/addairplane' class="button button1">Register airplane</a>
-  <a routerLink='/landingadmin' class="button button1">Back</a> -->
-  
+  <div class="landingPage">
+    <p class="title">Planner Landing Page</p>
+    <div class="tableHead">
+      <tr>
+        <!-- Links need to be verified -->
+        <th><p class="title2">Trajects<a routerLink="/addtraject" class="addNew">Add</a></p></th>
+        <th><p class="title2">Trips<a routerLink="/addtrip" class="addNew">Add</a></p></th>
+      </tr>
+    </div>
+
+    <div class="list">
+      <nav>
+          <ul>
+              <li *ngFor="let flight of flights">{{flight.departureAirport.name}} - {{flight.arrivalAirport.name}}
+                ({{flight.inactiveStartdate}} - {{flight.inactiveEnddate}})</li>
+          </ul>
+      </nav>
+    </div>
+
+    <div class="list">
+        <nav>
+            <ul>
+                <li *ngFor="let flight of flights">{{flight.departureAirport.name}} - {{flight.arrivalAirport.name}}
+                  ({{flight.inactiveStartdate}} - {{flight.inactiveEnddate}})</li>
+            </ul>
+        </nav>
+      </div>
+  </div>
 </div>

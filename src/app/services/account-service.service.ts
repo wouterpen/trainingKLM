@@ -29,7 +29,7 @@ export class AccountServiceService {
   //     .get<Account>(`${this.url}/${this.endpoint}/` + id);
   // }
 
-  getUsers(): Observable<{ any }[]> {
+  getAccounts(): Observable<{ any }[]> {
     return this
       .httpClient
       .get<any[]>(`${this.url}/${this.endpointUser}`);

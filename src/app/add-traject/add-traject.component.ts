@@ -20,9 +20,7 @@ export class AddTrajectComponent implements OnInit {
 
     private originSelected: number;
     private destinationSelected: number;
-    private passengerService: PassengerServiceService) { }
-    originSelected: number;
-    destinationSelected: number;
+    // private passengerService: PassengerServiceService)
 
   airports = [];
 
@@ -48,9 +46,6 @@ export class AddTrajectComponent implements OnInit {
       data => console.log(data)
     );
     this.router.navigate(['/landingplanner']);
-      .subscribe(
-        data => console.log(data)
-      );
   }
 }
 

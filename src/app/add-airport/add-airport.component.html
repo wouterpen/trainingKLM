@@ -1,5 +1,4 @@
 <div class="container">
-  <app-landing-admin></app-landing-admin>
   <div class="div-style"><br><br>
     <div class="title">Register Airport </div><br><br>
     <form class="add-traject-form" #airportForm="ngForm">
@@ -15,7 +14,10 @@
       <div class="form-group">
         <input placeholder="Country" ngModel name="countryCode"><br><br>
       </div>
-      <a class="registerbutton" type="submit" (click)="addAirport(airportForm)">Add airport</a><br><br><br>
+        <div style="width:100%;text-align:center">
+        <a class="registerbutton" type="submit" (click)="addAirport(airportForm)">Add airport</a>
+        <span><a routerLink="/landingadmin" class="registerbutton" type="submit" (click)="addAirport(airportForm)">Back</a></span>
+      </div>
     </form>
   </div>
 </div>
