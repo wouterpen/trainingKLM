@@ -1,0 +1,171 @@
+<!-- <div class="container">
+<h1>Summary Customer Details</h1>
+<ul>
+  <li>First Name: {{ account.firstName }}</li>
+  <li>Last Name:  {{ account.lastName }}</li>
+  <li>Street: {{ account.street }}</li>
+  <li>Postal Code: {{ account.postalCode }}</li>
+  <li>Country: {{ account.country }}</li>
+  <li>Passport Number: {{ account.passportNumber}}</li>
+  <li>Phone Number: {{ account.phoneNumber }}</li>
+</ul> -->
+
+
+<div class="container">
+    <h1>Register User </h1>
+    <form class="add-traject-form" #userForm="ngForm">
+      <div class="form-group">
+
+        <label>First name: </label>
+        <input ngModel name="firstName">
+
+        <label>Last name: </label>
+        <input ngModel name="lastName">
+
+        <label>Street name: </label>
+        <input ngModel name="streetName">
+
+        <label>Postalcode: </label>
+        <input ngModel name="postalCode">
+
+        <label>Country: </label>
+        <input ngModel name="country">
+
+        <label>Document Nr: </label>
+        <input ngModel name="documentNr">
+
+        <label>Phone Nr: </label>
+        <input ngModel name="phoneNr">
+
+        <label>Email Adress: </label>
+        <input ngModel name="emailAdress">
+
+        <label>Password: </label>
+        <input type = 'password' ngModel name="passWord">
+
+      </div>
+      <button type="submit" (click)="addUser(userForm)">Add user</button>
+    </form>
+  </div>
+
+
+
+
+
+    <!-- <div [hidden]="submitted">
+      <h1>Customer Details</h1>
+      <form #accountForm="ngForm" (ngSubmit)="onSubmit(accountForm)" >
+        <div class="form-group">
+          <label for="name">First Name </label>
+          <input type="text" class="form-control" id="name"
+                 required
+                 [(ngModel)]="model.name" name="name"
+                 #name="ngModel"> -->
+          <!-- <div [hidden]="name.valid || name.pristine"
+               class="alert alert-danger">  Name is required -->
+          <!-- </div> -->
+
+        <!-- <div class="form-group">
+            <label for="name">Last Name </label>
+            <input type="text" class="form-control" id="name"
+                    required
+                    [(ngModel)]="model.name" name="name"
+                    #name="ngModel"> -->
+            <!-- <div [hidden]="name.valid || name.pristine"
+                  class="alert alert-danger">  Name is required -->
+            <!-- </div> -->
+
+        <!-- <div class="form-group">
+            <label for="name">Street Name </label>
+            <input type="text" class="form-control" id="name"
+                    required
+                    [(ngModel)]="model.name" name="name"
+                    #name="ngModel"> -->
+            <!-- <div [hidden]="name.valid || name.pristine"
+                  class="alert alert-danger">  Name is required -->
+            <!-- </div>
+
+        <div class="form-group">
+            <label for="name">Postal Code </label>
+            <input type="text" class="form-control" id="name"
+                    required
+                    [(ngModel)]="model.name" name="name"
+                    #name="ngModel"> -->
+            <!-- <div [hidden]="name.valid || name.pristine"
+                  class="alert alert-danger">  Name is required -->
+            <!-- </div>
+
+        <div class="form-group">
+            <label for="name">Country </label>
+            <input type="text" class="form-control" id="name"
+                    required
+                    [(ngModel)]="model.name" name="name"
+                    #name="ngModel"> -->
+            <!-- <div [hidden]="name.valid || name.pristine"
+                  class="alert alert-danger">  Name is required -->
+            <!-- </div>
+
+        <div class="form-group">
+            <label for="name">Document Nr. </label>
+            <input type="text" class="form-control" id="name"
+                    required
+                    [(ngModel)]="model.name" name="name"
+                    #name="ngModel"> -->
+            <!-- <div [hidden]="name.valid || name.pristine"
+                  class="alert alert-danger">  Name is required -->
+            <!-- </div>
+
+        <div class="form-group">
+            <label for="name">Phone Number </label>
+            <input type="text" class="form-control" id="name"
+                    required
+                    [(ngModel)]="model.name" name="name"
+                    #name="ngModel"> -->
+            <!-- <div [hidden]="name.valid || name.pristine"
+                  class="alert alert-danger">  Name is required -->
+            <!-- </div>
+
+        <button type="submit" class="btn btn-success" [disabled]="!heroForm.form.valid">Submit</button> -->
+        <!-- <button type="button" class="btn btn-default" (click)="newHero(); heroForm.reset()">New Hero</button> -->
+      <!-- </form>
+      </div> -->
+
+
+
+
+    <!-- </div>
+
+    <div class="container">
+
+        <div [hidden]="submitted">
+          <h1>Account Information</h1>
+          <form (ngSubmit)="onSubmit()" #accountForm="ngForm">
+            <div class="form-group">
+              <label for="name">E-mail adress </label>
+              <input type="text" class="form-control" id="name"
+                     required
+                     [(ngModel)]="model.name" name="name"
+                     #name="ngModel"> -->
+              <!-- <div [hidden]="name.valid || name.pristine"
+                   class="alert alert-danger">  Name is required -->
+              <!-- </div>
+
+            <div class="form-group">
+                <label for="name">Password </label>
+                <input type="text" class="form-control" id="name"
+                        required
+                        [(ngModel)]="model.name" name="name"
+                        #name="ngModel"> -->
+                <!-- <div [hidden]="name.valid || name.pristine"
+                      class="alert alert-danger">  Name is required -->
+                <!-- </div>
+
+            <button type="submit" class="btn btn-success" [disabled]="!heroForm.form.valid">Submit</button> -->
+            <!-- <button type="button" class="btn btn-default" (click)="newHero(); heroForm.reset()">New Hero</button> -->
+          <!-- </form>
+          </div>
+
+
+
+
+        </div> -->

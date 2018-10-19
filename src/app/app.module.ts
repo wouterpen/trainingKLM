@@ -11,6 +11,8 @@ import { AddTrajectComponent } from './add-traject/add-traject.component';
 import { AddAirportComponent } from './add-airport/add-airport.component';
 
 import { NavigationComponent } from './navigation/navigation.component';
+import { AccountsComponent } from './accounts/accounts.component';
+import { AccountServiceService } from './services/account-service.service';
 
 @NgModule({
   declarations: [
@@ -19,7 +21,8 @@ import { NavigationComponent } from './navigation/navigation.component';
     LoginComponent,
     BookflightComponent,
     AddTrajectComponent,
-    AddAirportComponent
+    AddAirportComponent,
+    AccountsComponent
   ],
   imports: [
     BrowserModule,
@@ -27,7 +30,7 @@ import { NavigationComponent } from './navigation/navigation.component';
     FormsModule,
     HttpClientModule,
   ],
-  providers: [],
+  providers: [AccountServiceService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
