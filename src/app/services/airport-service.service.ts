@@ -13,28 +13,28 @@ const httpOptions = {
   providedIn: 'root'
 })
 export class AirportServiceService {
-  private url: string = "http://localhost:8082/api";
-  private endpointAirport: string = "airports";
-  private endpointAirportAdd: string = "airports";
+  private url = 'http://localhost:8082/api';
+  private endpointAirport = 'airports';
+  private endpointAirportAdd = 'airports';
 
 
   constructor(private httpClient: HttpClient) { }
 
 
-  getAirports(): Observable<{any}[]> {
+  getAirports(): Observable<{ any }[]> {
     return this
       .httpClient
-      .get<any[]>(`${this.url}/${this.endpointAirport}`)
-  };
+      .get<any[]>(`${this.url}/${this.endpointAirport}`);
+  }
 
-  addAirport(nameAirport: any){
+  addAirport(nameAirport: any) {
     return this
-    .httpClient
-    .post<any>(
-      `${this.url}/${this.endpointAirportAdd}`,
-      nameAirport,
-      httpOptions
-    )
+      .httpClient
+      .post<any>(
+        `${this.url}/${this.endpointAirportAdd}`,
+        nameAirport,
+        httpOptions
+      );
   }
 
 }

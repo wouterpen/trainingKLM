@@ -11,16 +11,39 @@ const httpOptions = {
 @Injectable({
   providedIn: 'root'
 })
-
 export class AccountServiceService {
+  // private url = 'http://localhost:8082/api';
+  // private endpoint  = 'accounts';
+  // loginAccount =  {id : 1};
 
-  private url: string = "http://localhost:8082/api/accounts";
+  private url = 'http://localhost:8082/api';
+  private endpointUser = 'accounts';
+  private endpointUserAdd = 'accounts';
+
 
   constructor(private httpClient: HttpClient) { }
 
-  getAccounts(): Observable<Account[]> {
+  // getById(id: number): Observable<Account> {
+  //   return this
+  //     .httpClient
+  //     .get<Account>(`${this.url}/${this.endpoint}/` + id);
+  // }
+
+  getUsers(): Observable<{ any }[]> {
     return this
       .httpClient
-      .get<Account[]>(`${this.url}`)
-  };
+      .get<any[]>(`${this.url}/${this.endpointUser}`);
+  }
+
+
+  addUser(infoUser: any) {
+    return this
+      .httpClient
+      .post<any>(
+        `${this.url}/${this.endpointUserAdd}`,
+        infoUser,
+        httpOptions
+      );
+  }
+
 }

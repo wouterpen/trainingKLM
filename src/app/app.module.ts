@@ -11,6 +11,8 @@ import { AddTrajectComponent } from './add-traject/add-traject.component';
 import { AddAirportComponent } from './add-airport/add-airport.component';
 
 import { NavigationComponent } from './navigation/navigation.component';
+import { AccountsComponent } from './accounts/accounts.component';
+import { AccountServiceService } from './services/account-service.service';
 import { LandingAdminComponent } from './landing-admin/landing-admin.component';
 import { LandingPlannerComponent } from './landing-planner/landing-planner.component';
 import { AddTripComponent } from './add-trip/add-trip.component';
@@ -24,6 +26,7 @@ import { AddPlaneComponent } from './add-plane/add-plane.component';
     BookflightComponent,
     AddTrajectComponent,
     AddAirportComponent,
+    AccountsComponent,
     LandingAdminComponent,
     LandingPlannerComponent,
     AddTripComponent,
@@ -35,7 +38,7 @@ import { AddPlaneComponent } from './add-plane/add-plane.component';
     FormsModule,
     HttpClientModule,
   ],
-  providers: [],
+  providers: [AccountServiceService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
