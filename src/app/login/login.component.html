@@ -1,0 +1,35 @@
+
+
+ <div class="div-style">
+<form #loginForm = "ngForm" (ngSubmit) = "onSubmit(loginForm)">
+
+
+
+  <div class = "avatar">
+  <img class = "resize" src="avatar.png" alt="Avatar"> <br>
+  </div>
+
+  <div>
+  <label> Username: </label> <br>
+  <input   placeholder = "username"  type="text" name = "userName" ngModel> <br> <br>
+  </div>
+
+  <div>
+  <label> Password: </label>  <br><br>
+  <input   placeholder = "password" type="password"  name = "passWord" ngModel> <br><br>
+  </div>
+
+  <div>
+  <button (click)= "loginFunction(loginForm)">Login</button> <br><br>
+  </div>
+
+  <div>
+    <a href="">Forgot username/password?</a>
+  </div>
+
+</form>
+
+</div> 
+
+
+
