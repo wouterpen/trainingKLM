@@ -17,7 +17,10 @@ export class AddAirportComponent implements OnInit {
   addAirport(airportForm) {
     const airportAddForm = {
       'id': 0,
-      'name':airportForm.value.airport
+      'name':airportForm.value.airport,
+      'abbreviation': airportForm.value.abbreviation,
+      'city':airportForm.value.city,
+      'countryCode': airportForm.value.countryCode
     }
     this.airportService.addAirport(airportAddForm).subscribe(
       data => console.log('data',data)

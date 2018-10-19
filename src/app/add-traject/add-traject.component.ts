@@ -14,11 +14,10 @@ export class AddTrajectComponent implements OnInit {
   constructor(private flightService: FlightServiceService,
     private airportService: AirportServiceService,
     private passengerService: PassengerServiceService) { }
-    private originSelected: number;
-    private destinationSelected: number;
+  private originSelected: number;
+  private destinationSelected: number;
 
   airports = [];
-  flights = [];
 
   ngOnInit() {
     this.originSelected = 1;
@@ -28,26 +27,21 @@ export class AddTrajectComponent implements OnInit {
       data => {
         this.airports = data;
       })
-
-    this.flightService.getFlights().subscribe(
-      data => {
-        this.flights = data;
-      })
   }
 
   addFlight(userForm) {
     const flightAddForm = {
-      'duration': userForm.value.duration,
-      'origin': {
-        'id': userForm.value.origin,
-      },
-      'destination': {
-        'id': userForm.value.Destination,
-      }
+      'departureAirport': userForm.value.departureAirport,
+      'arrivalAirport': userForm.value.arrivalAirport,
+      'inactiveStartdate': userForm.value.inactiveStartdate,
+      'inactiveEnddate': userForm.value.inactiveEnddate
     }
-
-    this.flightService.addFlight(flightAddForm).subscribe(
+    this.flightService.addFlight(flightAddForm)
+    .subscribe(
       data => console.log(data)
     )
   }
+
+
 }
+
