@@ -13,6 +13,7 @@ import { AddAirportComponent } from './add-airport/add-airport.component';
 import { NavigationComponent } from './navigation/navigation.component';
 import { LandingAdminComponent } from './landing-admin/landing-admin.component';
 import { LandingPlannerComponent } from './landing-planner/landing-planner.component';
+import { AddTripComponent } from './add-trip/add-trip.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { LandingPlannerComponent } from './landing-planner/landing-planner.compo
     AddTrajectComponent,
     AddAirportComponent,
     LandingAdminComponent,
-    LandingPlannerComponent
+    LandingPlannerComponent,
+    AddTripComponent
   ],
   imports: [
     BrowserModule,

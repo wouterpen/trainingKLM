@@ -3,20 +3,25 @@
   <form class="add-traject-form" #userForm="ngForm">
     <div class="form-group">
       <label>From: </label>
-      <select class="option-label" [(ngModel)]='originSelected' name="origin">
-        <option name="origin" value={{airport.id}} *ngFor="let airport of airports">{{airport.name}}</option>
+      <select class="option-label" [(ngModel)]='originSelected' name="departureAirport">
+        <option name="departureAirport" value={{airport.id}} *ngFor="let airport of airports">{{airport.name}}</option>
       </select>
     </div>
     <div class="form-group">
       <label>To: </label>
-      <select class="option-label" [(ngModel)]='destinationSelected' name="Destination">
-        <option name="Destination" value={{airport.id}} *ngFor="let airport of airports">{{airport.name}}</option>
+      <select class="option-label" [(ngModel)]='destinationSelected' name="arrivalAirport">
+        <option name="arrivalAirport" value={{airport.id}} *ngFor="let airport of airports">{{airport.name}}</option>
       </select>
     </div>
     <div class="form-group">
-      <label>duration:</label>
-      <input class="option-label" ngModel name="duration">
+      <label>startdate:</label>
+      <input class="option-label" ngModel name="inactiveStartdate">
     </div>
+    <div class="form-group">
+        <label>endDate:</label>
+        <input class="option-label" ngModel name="inactiveEnddate">
+      </div>
     <button type="submit" (click)="addFlight(userForm)">Submit Flight</button>
   </form>
 </div>
+
