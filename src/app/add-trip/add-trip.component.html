@@ -1,0 +1,13 @@
+<div class="container">
+  <h1>Register TRIP </h1>
+  <form class="add-trip-form" #tripForm="ngForm">
+    <div class="form-group">
+      <label>Traject: </label>
+      <select class="option-label" [(ngModel)]='originSelected' name="traject">
+        <option name="traject" *ngFor="let flight of flights"> {{flight.departureAirport.name}} - {{flight.arrivalAirport.name}} </option>
+      </select>
+    </div>
+
+    <button type="submit" (click)="addTrip(tripForm)">Submit Flight</button>
+  </form>
+</div>

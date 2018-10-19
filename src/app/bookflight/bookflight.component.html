@@ -1,28 +1,9 @@
 <div>
   <ul>
-    <li *ngFor="let airport of airports">
-      {{airport.name}}
-    </li>
-  </ul>
-
-  <ul>
     <li *ngFor="let flight of flights">
-      {{flight.duration}}
+      {{flight.arrivalAirport.name}} {{flight.departureAirport.name}}
     </li>
   </ul>
-
-  <ul>
-    <li *ngFor="let plane of planes">
-      {{plane.brand}}
-    </li>
-  </ul>
-
-  <ul>
-    <li *ngFor="let passenger of passengers">
-      {{passenger.name}}
-    </li>
-  </ul>
-
 </div>
 
 
