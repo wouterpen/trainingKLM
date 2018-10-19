@@ -1,12 +1,15 @@
 export class Account {
-    id: number;
-    firstName: string;
-    lastName: string;
-    street: string;
-    postalCode: string;
-    country: string;
-    passportNumber: string;
-    phoneNumber: string;
-    email: string;
-    password: string;
+    id : number;
+    firstName : string;
+	lastName : string;
+	street : string;
+	streetNumber : string;
+	postalCode : string;
+	city : string;
+	country : string;
+	email : string;
+	phoneNumber : string;
+	passportNumber : string;
+	password : string;
+	type : string
 }
