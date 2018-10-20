@@ -25,13 +25,16 @@ export class AccountsComponent implements OnInit {
       'id': 0,
       'firstName': userForm.value.firstName,
       'lastName': userForm.value.lastName,
-      'street': userForm.value.streetName,
-      'postalCode': userForm.value.postalCode,
       'country': userForm.value.country,
+      'city': userForm.value.city,
+      'street': userForm.value.streetName,
+      'streetNumber': userForm.value.streetNr,
+      'postalCode': userForm.value.postalCode,
       'passportNumber': userForm.value.documentNr,
       'phoneNumber': userForm.value.phoneNr,
       'email': userForm.value.emailAdress,
       'password': userForm.value.passWord,
+      'type':"customer"
     };
 
     this.accountService.addUser(userAddForm).subscribe(

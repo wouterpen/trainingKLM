@@ -6,17 +6,18 @@
     <form #loginForm="ngForm" (ngSubmit)="onSubmit(loginForm)">
   
     <div>
-      <input placeholder="username" type="text" name="userName" ngModel> <br><br>
+      <input placeholder="username" type="text" name="username" ngModel> <br><br>
     </div>
   
     <div>
-      <input placeholder="password" type="password" name="passWord" ngModel> <br>
+      <input placeholder="password" type="password" name="password" ngModel> <br>
     </div>
   </form>   
   
-    <div class="forgotpassword">
+    <!-- <div class="forgotpassword">
       <a href="">Forgot username/password?</a>
-    </div>
+    </div> -->
+
     <div style="width:100%;position:absolute;">
       <a class="loginbutton" (click)="loginFunction(loginForm)">Login</a>
     </div>

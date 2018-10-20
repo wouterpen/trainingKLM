@@ -45,7 +45,9 @@ export class AddTrajectComponent implements OnInit {
     .subscribe(
       data => console.log(data)
     );
+    alert("Succesfully registered the traject.")
     this.router.navigate(['/landingplanner']);
+    window.location.reload();
   }
 }
 

@@ -4,13 +4,13 @@
 	border: #00A1E4;
 	border-style: solid;
 	border-width: 3px;
-	height:300px;
+	height:400px;
 	width:600px;
 	position:absolute;
 	top:50%;
 	left:50%;
 	margin-left:-300px;
-	margin-top:-150px;
+	margin-top:-200px;
 }   
 .div-style a{
 	margin:0 40px;

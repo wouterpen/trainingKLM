@@ -1,13 +1,40 @@
 <div class="container">
-  <h1>Register TRIP </h1>
-  <form class="add-trip-form" #tripForm="ngForm">
-    <div class="form-group">
-      <label>Traject: </label>
-      <select class="option-label" [(ngModel)]='originSelected' name="traject">
-        <option name="traject" *ngFor="let flight of flights"> {{flight.departureAirport.name}} - {{flight.arrivalAirport.name}} </option>
-      </select>
-    </div>
+  <div class="div-style">
+    <p class="title">Register Trip</p>
+    <form class="add-traject-form" #userForm="ngForm">
 
-    <button type="submit" (click)="addTrip(tripForm)">Submit Flight</button>
-  </form>
-</div>
+      <!-- traject -->
+      <div class="form-group">
+        <label>Trajects: </label>
+        <select class="option-label" [(ngModel)]='traject' name="traject">
+          <option name="traject" *ngFor="let flight of flights"> {{flight.departureAirport.name}} - {{flight.arrivalAirport.name}} </option>
+        </select>
+      </div>
+
+      <!-- airplane ID -->
+      <div class="form-group">
+        <label>Airplanes: </label>
+        <select class="option-label" [(ngModel)]='plane' name="plane">
+          <option name="plane" *ngFor="let plane of planes"> {{plane.name}}
+          </option>
+        </select>
+      </div>
+
+      <!-- duration -->
+      <div class="form-group">
+          <input  placeholder="Duration (hh:mm:ss)" ngModel name="duration">
+      </div>
+
+      <!-- price (not present in DB yet) -->
+      <!-- <div class="form-group">
+          <input  placeholder="Price in €0" ngModel name="price">
+      </div> -->
+
+      <!-- DATES? -->
+      <a class="registerbutton" type="submit" (click)="addTrip(userForm)">Submit Trip</a>
+      <span><a routerLink="/landingplanner" class="registerbutton" type="submit">Back</a></span>
+
+    </form>
+  </div>
+</div>
+ 
