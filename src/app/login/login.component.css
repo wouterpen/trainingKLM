@@ -54,7 +54,6 @@ input{
     color: #FFFFFF;
     width:115px;
     height:35px;
-    margin-top:80px;
     line-height: 35px;
     text-decoration: none;
     font-size: 15px;
@@ -72,4 +71,8 @@ input{
   color: #FFFFFF;
   border-radius: 5px;
   cursor: pointer;
+}
+
+form {
+  margin-bottom:20px;
 }

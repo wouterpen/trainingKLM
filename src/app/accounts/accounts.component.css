@@ -20,13 +20,13 @@
     border-style: solid;
     border-width: 3px;
 
-    height:550px;
+    height:650px;
 	width:600px;
     position: absolute;
     top:50%;
 	left:50%;
 	margin-left:-300px;
-    margin-top:-275px;
+    margin-top:-325px;
 }
 
 input{

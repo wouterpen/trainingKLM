@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { AirportServiceService } from '../services/airport-service.service';
 
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-add-airport',
@@ -9,7 +10,9 @@ import { AirportServiceService } from '../services/airport-service.service';
 })
 export class AddAirportComponent implements OnInit {
 
-  constructor(private airportService: AirportServiceService) { }
+  constructor(
+    private airportService: AirportServiceService,
+    private router: Router) { }
 
   ngOnInit() {
   }
@@ -25,6 +28,7 @@ export class AddAirportComponent implements OnInit {
     this.airportService.addAirport(airportAddForm).subscribe(
       data => console.log('data',data)
     )
+    alert("Succesfully registered the airport.")
+    this.router.navigate(['/landingadmin']);
   }
-
 }
