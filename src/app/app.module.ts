@@ -17,6 +17,7 @@ import { LandingAdminComponent } from './landing-admin/landing-admin.component';
 import { LandingPlannerComponent } from './landing-planner/landing-planner.component';
 import { AddTripComponent } from './add-trip/add-trip.component';
 import { AddPlaneComponent } from './add-plane/add-plane.component';
+import { SearchFlightComponent } from './search-flight/search-flight.component';
 
 @NgModule({
   declarations: [
@@ -30,7 +31,8 @@ import { AddPlaneComponent } from './add-plane/add-plane.component';
     LandingAdminComponent,
     LandingPlannerComponent,
     AddTripComponent,
-    AddPlaneComponent
+    AddPlaneComponent,
+    SearchFlightComponent
   ],
   imports: [
     BrowserModule,
