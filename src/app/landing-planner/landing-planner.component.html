@@ -2,8 +2,8 @@
   <div class="landingPage">
     <p class="title">Planner Landing Page</p>
     <div class="tableHead">
+
       <tr>
-        <!-- Links need to be verified -->
         <th><p class="title2">Trajects<a routerLink="/addtraject" class="addNew">Add</a></p></th>
         <th><p class="title2">Trips<a routerLink="/addtrip" class="addNew">Add</a></p></th>
       </tr>
@@ -12,19 +12,55 @@
     <div class="list">
       <nav>
           <ul>
-              <li *ngFor="let flight of flights">{{flight.departureAirport.name}} - {{flight.arrivalAirport.name}}
-                ({{flight.inactiveStartdate}} - {{flight.inactiveEnddate}})</li>
+              <li *ngFor="let flight of flights" class="traject">{{flight.departureAirport.name}} - {{flight.arrivalAirport.name}}</li>
           </ul>
       </nav>
     </div>
 
     <div class="list">
         <nav>
-            <ul>
-                <li *ngFor="let flight of flights">{{flight.departureAirport.name}} - {{flight.arrivalAirport.name}}
-                  ({{flight.inactiveStartdate}} - {{flight.inactiveEnddate}})</li>
+            <ul class="listTrips">
+                  <li *ngFor="let trip of trips">
+                    <table>
+                      <th colspan="4">{{trip.trajectOrigin.name}} - {{trip.trajectDestination.name}}</th>
+                      <tbody>
+                        <tr class="columnNames">
+                          <td>Airplane</td>
+                          <td>Startdate</td>
+                          <td>Enddate</td>
+                          <td>Price</td>
+                        </tr>
+                        <tr>
+                          <td>{{trip.plane}}</td>
+                          <td>{{trip.startDate}}</td>
+                          <td>{{trip.endDate}}</td>
+                          <td>€{{trip.price}}</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </li>
+                  <li *ngFor="let trip of tripsHC">
+                    <table>
+                      <th colspan="4">{{trip.trajectOrigin.name}} - {{trip.trajectDestination.name}}</th>
+                      <tbody>
+                        <tr class="columnNames">
+                          <td>Airplane</td>
+                          <td>Startdate</td>
+                          <td>Enddate</td>
+                          <td>Price</td>
+                        </tr>
+                        <tr>
+                          <td>{{trip.plane}}</td>
+                          <td>{{trip.startDate}}</td>
+                          <td>{{trip.endDate}}</td>
+                          <td>€{{trip.price}}</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </li>
             </ul>
         </nav>
       </div>
+
   </div>
 </div>

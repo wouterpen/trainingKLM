@@ -6,12 +6,13 @@ import { Injectable } from '@angular/core';
 export class DataServiceService {
 
 
-  trips: object[] = new Array();
+  trips: any = new Array();
 
   constructor() { }
 
   add(event: object){
     this.trips.push(event);
+    console.log(this.trips);
   };
 
   get(): object[]{

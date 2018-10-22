@@ -4,6 +4,8 @@ import { FlightServiceService } from '../services/flight-service.service';
 import { PlaneServiceService } from '../services/plane-service.service';
 import { DataServiceService } from '../data-service.service';
 
+import { Router } from '@angular/router';
+
 @Component({
   selector: 'app-add-trip',
   templateUrl: './add-trip.component.html',
@@ -13,7 +15,8 @@ export class AddTripComponent implements OnInit {
 
   constructor(private flightService: FlightServiceService,
     private planeService: PlaneServiceService,
-    private dataService: DataServiceService) { }
+    private dataService: DataServiceService,
+    private router: Router) { }
   
   flights = [];
   planes = [];
@@ -31,17 +34,18 @@ export class AddTripComponent implements OnInit {
   }
   addTrip(userForm){
     const arrayDepartureAndArrival =  userForm.value.traject.split("*");
-    const idDepartureAirport = arrayDepartureAndArrival[0];
-    const idArrivalAirport = arrayDepartureAndArrival[1];
+    const idDepartureAirport = JSON.parse(arrayDepartureAndArrival[0]);
+    const idArrivalAirport = JSON.parse(arrayDepartureAndArrival[1]);
     const addTripForm = {
-      'trajectOrigin': idDepartureAirport,
-      'trajectDestination': idArrivalAirport,
-      'plane': userForm.value.plane,
-      'startDate': userForm.value.arrivalDate,
-      'endDate': userForm.value.departureDate,
-      'duration': userForm.value.Duration,
-      'price': userForm.value.price
+      trajectOrigin: idDepartureAirport,
+      trajectDestination: idArrivalAirport,
+      plane: userForm.value.plane,
+      startDate: userForm.value.arrivalDate,
+      endDate: userForm.value.departureDate,
+      duration: userForm.value.Duration,
+      price: userForm.value.price
     };
     this.dataService.add(addTripForm);
+    this.router.navigate(['/landingplanner']);
   }
 }
