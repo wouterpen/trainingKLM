@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 
 import { FlightServiceService } from '../services/flight-service.service';
 import { PlaneServiceService } from '../services/plane-service.service';
+import { DataServiceService } from '../data-service.service';
 
 @Component({
   selector: 'app-add-trip',
@@ -11,7 +12,8 @@ import { PlaneServiceService } from '../services/plane-service.service';
 export class AddTripComponent implements OnInit {
 
   constructor(private flightService: FlightServiceService,
-    private planeService: PlaneServiceService) { }
+    private planeService: PlaneServiceService,
+    private dataService: DataServiceService) { }
   
   flights = [];
   planes = [];
@@ -31,10 +33,15 @@ export class AddTripComponent implements OnInit {
     const arrayDepartureAndArrival =  userForm.value.traject.split("*");
     const idDepartureAirport = arrayDepartureAndArrival[0];
     const idArrivalAirport = arrayDepartureAndArrival[1];
-    console.log(arrayDepartureAndArrival);
     const addTripForm = {
-    
+      'trajectOrigin': idDepartureAirport,
+      'trajectDestination': idArrivalAirport,
+      'plane': userForm.value.plane,
+      'startDate': userForm.value.arrivalDate,
+      'endDate': userForm.value.departureDate,
+      'duration': userForm.value.Duration,
+      'price': userForm.value.price
     };
-    console.log(userForm);
+    this.dataService.add(addTripForm);
   }
 }
