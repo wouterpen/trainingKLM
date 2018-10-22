@@ -25,7 +25,6 @@ export class LoginComponent implements OnInit {
     this.accountService.getAccounts().subscribe(
       data => {
         this.accounts = data;
-        console.log(this.accounts);
       })   
   }
 
@@ -38,7 +37,6 @@ export class LoginComponent implements OnInit {
         for (var j = 0; j < this.accounts.length;j++){
           if (this.accounts[j].email == loginForm.value.username && this.accounts[j].password == loginForm.value.password) {
             this.type = this.accounts[j].type;
-            console.log("Account valid")
               switch(this.type) {
                 case "admin":
                   this.router.navigate(['/landingadmin']);
@@ -52,7 +50,6 @@ export class LoginComponent implements OnInit {
               }
             }
           }
-        console.log("Acc/pass combination not found")
         alert("Invalid login.")
       }
     }

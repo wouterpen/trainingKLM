@@ -1,0 +1,55 @@
+<div class="container">
+    <div class="div-style"> <br>
+  
+      <p class="title">Overview of your booking</p> 
+      <div class="list">
+          <nav>
+              <table *ngFor="let trip of tripsHC" class="searchList">
+                  <th colspan="4">{{trip.trajectOrigin.name}} - {{trip.trajectDestination.name}}</th>
+                  <tbody>
+                    <tr class="columnNames">
+                      <td>Airplane</td>
+                      <td>Startdate</td>
+                      <td>Enddate</td>
+                      <td>Price</td>
+                    </tr>
+                    <tr>
+                      <td>{{trip.plane}}</td>
+                      <td>{{trip.startDate}}</td>
+                      <td>{{trip.endDate}}</td>
+                      <td>€{{trip.price}}</td>
+                    </tr>
+                  </tbody>
+                </table>
+              <table *ngIf="currentCustomer" class="customerDetails">
+                  <tbody>
+                    <tr class="columnNames">
+                      <th>First name</th>
+                      <td>{{currentCustomer.firstName}}</td>
+                    </tr>
+                    <tr class="columnNames">
+                      <th>Last name</th>
+                      <td>{{currentCustomer.lastName}}</td>
+                    </tr>
+                    <tr class="columnNames">
+                      <th>Phone number</th>
+                      <td>{{currentCustomer.phoneNumber}}</td>
+                    </tr>
+                    <tr class="columnNames">
+                      <th>Street</th>
+                      <td>{{currentCustomer.street}}</td>
+                    </tr>
+                    <tr class="columnNames">
+                      <th>Street number</th>
+                      <td>{{currentCustomer.streetNumber}}</td>
+                    </tr>
+                  </tbody>
+                </table>
+          </nav>
+        </div>
+        <div style="width:100%;text-align:center">
+          <a class="registerbutton" type="submit" (click)="addAircraft(aircraftForm)">Proceed to payment</a>
+        </div>
+    </div>
+  </div>
+  

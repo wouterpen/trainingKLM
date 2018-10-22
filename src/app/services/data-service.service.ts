@@ -6,7 +6,7 @@ import { Injectable } from '@angular/core';
 export class DataServiceService {
 
 
-  trips: object[] = new Array();
+  trips: any = new Array();
 
   constructor() { }
 

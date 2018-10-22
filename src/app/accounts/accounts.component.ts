@@ -5,7 +5,7 @@ import { Account } from '../domain/account.model';
 
 @Component({
   selector: 'app-accounts',
-  templateUrl: './accounts.component.html',
+  templateUrl: './accounts.component.html', 
   styleUrls: ['./accounts.component.css']
 })
 
@@ -37,8 +37,6 @@ export class AccountsComponent implements OnInit {
       'type':"customer"
     };
 
-    this.accountService.addUser(userAddForm).subscribe(
-      data => console.log('data', data)
-    );
+    this.accountService.addUser(userAddForm).subscribe();
   }
 }

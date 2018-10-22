@@ -1,28 +1,14 @@
 <div class="container">
-  <div class="landingPage">
-    <p class="title">Planner Landing Page</p>
-    <div class="tableHead">
+  <div class="div-style">
 
-      <tr>
-        <th><p class="title2">Trajects<a routerLink="/addtraject" class="addNew">Add</a></p></th>
-        <th><p class="title2">Trips<a routerLink="/addtrip" class="addNew">Add</a></p></th>
-      </tr>
-    </div>
-
-    <div class="list">
-      <nav>
-          <ul>
-              <li *ngFor="let flight of flights" class="traject">{{flight.departureAirport.name}} - {{flight.arrivalAirport.name}}</li>
-          </ul>
-      </nav>
-    </div>
+    <p class="title">Search results</p>
 
     <div class="list">
         <nav>
             <ul class="listTrips">
                   <li *ngFor="let trip of trips">
-                    <table>
-                      <th colspan="4">{{trip.trajectOrigin.name}} - {{trip.trajectDestination.name}}</th>
+                    
+                    <table class="searchList">
                       <tbody>
                         <tr class="columnNames">
                           <td>Airplane</td>
@@ -38,9 +24,11 @@
                         </tr>
                       </tbody>
                     </table>
+                  
                   </li>
                   <li *ngFor="let trip of tripsHC">
-                    <table>
+                      <a routerLink="/adduser">
+                    <table class="searchList">
                       <th colspan="4">{{trip.trajectOrigin.name}} - {{trip.trajectDestination.name}}</th>
                       <tbody>
                         <tr class="columnNames">
@@ -57,10 +45,10 @@
                         </tr>
                       </tbody>
                     </table>
+                  </a>
                   </li>
             </ul>
         </nav>
       </div>
-
-  </div>
+    </div>
 </div>

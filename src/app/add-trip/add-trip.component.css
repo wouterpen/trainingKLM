@@ -1,9 +1,4 @@
-input{
-    width: 120px;
-    border: auto;
-    border-radius: 10px;
- }
- .div-style{
+.div-style{
     background-color: #FFFFFF;
     border-radius: 8px;
     border: #00A1E4;
@@ -12,10 +7,25 @@ input{
     width:600px;
     position: absolute;
     top:50%;
-	left:50%;
-	margin-left:-300px;
-    margin-top:-150px;
+    left:50%;
+    margin-left:-300px;
+    margin-top:-225px;
   }
+  
+  .option-label{
+    margin-top:5px;
+    padding:8px;
+    display:block;
+    border:none;
+    width:53%;
+    height: 30px;
+    background-color: #FFFFFF;
+    border-width: 2px;
+    border-color: #00A1E4;
+    border-style: solid;
+    border-radius: 5px;
+    margin-left: 23%;
+}
 
   .div-style a{
     color: #FFFFFF;
@@ -71,10 +81,10 @@ a{
 	text-align: center;
 	padding: 8px 30px;
 	width:100px;
-  height:50px;
-  margin-top:80px;
-  text-align: center;
-  line-height: 80px;
+    height:50px;
+    margin-top:80px;
+    text-align: center;
+    line-height: 80px;
 	text-decoration: none;
 	font-size: 15px;
 	border-radius: 5px;
