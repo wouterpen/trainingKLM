@@ -18,6 +18,8 @@ import { LandingPlannerComponent } from './landing-planner/landing-planner.compo
 import { AddTripComponent } from './add-trip/add-trip.component';
 import { AddPlaneComponent } from './add-plane/add-plane.component';
 import { SearchFlightComponent } from './search-flight/search-flight.component';
+import { SearchResultsComponent } from './search-results/search-results.component';
+import { DetailsComponent } from './details/details.component';
 
 @NgModule({
   declarations: [
@@ -32,7 +34,9 @@ import { SearchFlightComponent } from './search-flight/search-flight.component';
     LandingPlannerComponent,
     AddTripComponent,
     AddPlaneComponent,
-    SearchFlightComponent
+    SearchFlightComponent,
+    SearchResultsComponent,
+    DetailsComponent
   ],
   imports: [
     BrowserModule,

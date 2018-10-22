@@ -1,6 +1,6 @@
 <div class="container">
   <div class="form">
-    <p class="title">Register User </p>
+    <p class="title">Create an account</p>
     <form class="add-traject-form" #userForm="ngForm" style="margin-bottom:20px;">
       <div class="form-group">
         <input  placeholder="First name" ngModel name="firstName">
@@ -16,6 +16,6 @@
         <input  placeholder="Password" type = 'password' ngModel name="passWord">
       </div>
     </form>
-    <a type="submit" (click)="addUser(userForm)">Add user</a>
+    <a type="submit" (click)="addUser(userForm)" routerLink="/details">Register</a>
     </div>
   </div>

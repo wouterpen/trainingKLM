@@ -5,7 +5,7 @@ import { Account } from '../domain/account.model';
 
 @Component({
   selector: 'app-accounts',
-  templateUrl: './accounts.component.html',
+  templateUrl: './accounts.component.html', 
   styleUrls: ['./accounts.component.css']
 })
 
