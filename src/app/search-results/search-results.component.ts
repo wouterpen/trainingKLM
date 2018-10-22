@@ -1,20 +1,14 @@
 import { Component, OnInit } from '@angular/core';
-import { FlightServiceService } from '../services/flight-service.service';
-import { DataServiceService } from '../services/data-service.service';
 
 @Component({
-  selector: 'app-landing-planner',
-  templateUrl: './landing-planner.component.html',
-  styleUrls: ['./landing-planner.component.css']
+  selector: 'app-search-results',
+  templateUrl: './search-results.component.html',
+  styleUrls: ['./search-results.component.css']
 })
-export class LandingPlannerComponent implements OnInit {
+export class SearchResultsComponent implements OnInit {
 
-  constructor(
-    private flightService: FlightServiceService,
-    private dataService: DataServiceService) { }
+  constructor() { }
 
-  flights = [];
-  trips = [];
   tripsHC = [
     {
       trajectOrigin: {
@@ -60,16 +54,11 @@ export class LandingPlannerComponent implements OnInit {
     }
   ];
 
-
   ngOnInit() {
-    this.flightService.getFlights().subscribe(
-      data => {
-        this.flights = data;
-        console.log(data);
-      }
-    )
-
-    this.trips = this.dataService.get();
-    console.log('TRIPS= ',this.trips)
   }
+
+  alertButton() {
+    alert("Gelukt");
+  }
+
 }
