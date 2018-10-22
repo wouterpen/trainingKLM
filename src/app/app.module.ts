@@ -2,6 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule} from '@angular/forms';
 
+
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './/app-routing.module';
 import { LoginComponent } from './login/login.component';
@@ -17,6 +18,8 @@ import { LandingAdminComponent } from './landing-admin/landing-admin.component';
 import { LandingPlannerComponent } from './landing-planner/landing-planner.component';
 import { AddTripComponent } from './add-trip/add-trip.component';
 import { AddPlaneComponent } from './add-plane/add-plane.component';
+import { PaymentComponent } from './payment/payment.component';
+import { BookingconfirmedComponent } from './bookingconfirmed/bookingconfirmed.component';
 import { SearchFlightComponent } from './search-flight/search-flight.component';
 import { SearchResultsComponent } from './search-results/search-results.component';
 import { DetailsComponent } from './details/details.component';
@@ -34,6 +37,8 @@ import { DetailsComponent } from './details/details.component';
     LandingPlannerComponent,
     AddTripComponent,
     AddPlaneComponent,
+    PaymentComponent,
+    BookingconfirmedComponent,
     SearchFlightComponent,
     SearchResultsComponent,
     DetailsComponent
@@ -42,7 +47,7 @@ import { DetailsComponent } from './details/details.component';
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    HttpClientModule,
+    HttpClientModule
   ],
   providers: [AccountServiceService],
   bootstrap: [AppComponent]
