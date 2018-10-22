@@ -1,0 +1,87 @@
+.div-style{
+	background-color: #FFFFFF;
+	border-radius: 8px;
+	border: #00A1E4;
+	border-style: solid;
+	border-width: 3px;
+	height:650px;
+	width:800px;
+	position:absolute;
+	top:50%;
+	left:50%;
+	margin-left:-400px;
+	margin-top:-325px;
+}   
+ 
+.title{
+	font-family: 'Gill Sans', 'Gill Sans MT', 'Calibri', 'Trebuchet MS', sans-serif;
+	font-size: 36px;
+	color: #00A1E4;
+	text-align: center;
+	font-style: initial;
+}
+ 
+::placeholder {
+	color: #00618A;
+}
+
+.container {
+	width: 100%;
+	height:90vh; 
+	position:relative;
+} 
+
+ul {
+    float:top;
+    list-style-type: none;
+    margin:0;padding:0;
+    text-align:center;
+}
+
+li {
+    background: rgba(0, 160, 228, 0.185);
+    border-radius: 8px;
+    margin:4px;
+    padding-left:10px;
+    vertical-align: middle;
+    text-align: left;
+    border: 1px solid #00A1E4;
+    height:150px;
+    line-height: 45px;
+    display: inline-block;
+    width:90%;
+}
+
+.searchList {text-align:center;width:100%;padding-bottom:5%;border-bottom: 1px dotted black;border-top: 1px dotted black;}
+
+.searchList li {height:110px;text-align:center;}
+
+.searchList th {font-size: 1.4em;line-height:100px;}
+
+.searchList td {padding:0;margin:0;line-height: 25px;}
+
+nav ul{overflow:hidden; overflow-y:scroll;}
+
+.customerDetails {text-align:left;width:100%;margin-top:50px;padding-bottom:5%;padding-left:25%;border-bottom: 1px dotted black;}
+
+.div-style a{
+	margin:0 40px;
+	color: #FFFFFF;
+    text-align: center;
+    line-height:100px;
+	padding: 8px 30px;
+	width: 30%;
+	text-decoration: none;
+	font-size: 15px;
+	border-radius: 5px;
+	cursor: pointer;
+	background-color: #FF7800;
+	font-family: 'Gill Sans', 'Gill Sans MT', 'Calibri', 'Trebuchet MS', sans-serif;
+}
+ 
+.div-style a:hover {
+	background-color: #00A1E4;
+	color: #FFFFFF;
+	border-radius: 5px;
+	cursor: pointer;
+}

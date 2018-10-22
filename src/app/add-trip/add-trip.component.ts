@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 
 import { FlightServiceService } from '../services/flight-service.service';
 import { PlaneServiceService } from '../services/plane-service.service';
-import { DataServiceService } from '../data-service.service';
+import { DataServiceService } from '../services/data-service.service';
 
 import { Router } from '@angular/router';
 
