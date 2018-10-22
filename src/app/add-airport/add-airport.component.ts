@@ -25,10 +25,10 @@ export class AddAirportComponent implements OnInit {
       'city':airportForm.value.city,
       'countryCode': airportForm.value.countryCode
     }
-    this.airportService.addAirport(airportAddForm).subscribe(
-      data => console.log('data',data)
-    )
-    alert("Succesfully registered the airport.")
+    this.airportService.addAirport(airportAddForm).subscribe(data =>{
+      alert("Succesfully registered the airport.")
+    });
+    
     this.router.navigate(['/landingadmin']);
   }
 }

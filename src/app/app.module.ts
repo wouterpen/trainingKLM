@@ -21,6 +21,8 @@ import { AddPlaneComponent } from './add-plane/add-plane.component';
 import { PaymentComponent } from './payment/payment.component';
 import { BookingconfirmedComponent } from './bookingconfirmed/bookingconfirmed.component';
 import { SearchFlightComponent } from './search-flight/search-flight.component';
+import { SearchResultsComponent } from './search-results/search-results.component';
+import { DetailsComponent } from './details/details.component';
 
 @NgModule({
   declarations: [
@@ -37,7 +39,9 @@ import { SearchFlightComponent } from './search-flight/search-flight.component';
     AddPlaneComponent,
     PaymentComponent,
     BookingconfirmedComponent,
-    SearchFlightComponent
+    SearchFlightComponent,
+    SearchResultsComponent,
+    DetailsComponent
   ],
   imports: [
     BrowserModule,

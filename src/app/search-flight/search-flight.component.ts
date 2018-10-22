@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { AirportServiceService } from '../services/airport-service.service';
 
 @Component({
   selector: 'app-search-flight',
@@ -7,13 +8,30 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SearchFlightComponent implements OnInit {
 
+  constructor(private airportService : AirportServiceService) { }
+  private originSelected: number;
+  private destinationSelected: number;
 
+  airportsOrigin = [];
+  airportDestination =[];
 
-
-
-  constructor() { }
 
   ngOnInit() {
+    this.originSelected = 0;
+    this.destinationSelected = 0;
+    this.airportService.getAirports().subscribe(
+      data => {
+        this.airportsOrigin = [...data];
+        this.airportDestination = [...data];
+        this.airportsOrigin.unshift({
+          name: 'choose origin',
+          id: 0
+        })
+        this.airportDestination.unshift({
+          name: 'choose destination',
+          id: 0 
+        })
+      });
   }
 
   selectedFlight(searchForm) {
