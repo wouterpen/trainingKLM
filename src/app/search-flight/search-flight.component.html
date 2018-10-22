@@ -1,0 +1,18 @@
+<div class="container">
+  <div class="form">
+    <p class="title">Search Flights </p>
+    <form class="add-traject-form" #searchForm="ngForm" style="margin-bottom:20px;">
+      <div class="form-group">
+        <input  placeholder="From" ngModel name="from">
+        <input  placeholder="To" ngModel name="to">
+        <input  placeholder="Departure date" type="text" onfocus="(this.type='date')" ngModel name="departureDate">
+        <input  placeholder="Return date" type="text" onfocus="(this.type='date')" ngModel name="returnDate">
+        <input  type="number" placeholder="Passengers" ngModel name="passengers">
+      </div>
+    </form>
+    <a type="submit" (click)="selectedFlight(searchForm)">Search Flight!</a>
+    </div>
+  </div>  
+
+
+

@@ -1,8 +1,6 @@
 <div class="container">
   <div class="div-style">
-    <div class="title">
-      Register Trip
-    </div>
+    <p class="title">Register trip</p>
     <form class="add-trip-form" #userForm="ngForm">
       <div class="form-group">
         <select class="option-label" [(ngModel)]='flightsSelected' name="traject">
@@ -13,20 +11,20 @@
       </div>
       <div class="form-group">
         <select class="option-label" [(ngModel)]='planeSelected' name="plane">
-          <option name="plane" value={{plane.id}} *ngFor="let plane of planes"> {{plane.brand}} </option>
+          <option name="plane" value={{plane.id}} *ngFor="let plane of planes"> {{plane.name}} </option>
         </select>
       </div>
       <div class="form-group">
-        <input placeholder="YYYY-MM-DD" class="option-label" ngModel name="departureDate">
+        <input placeholder="YYYY-MM-DD" class="option-label" ngModel type="date" name="departureDate">
       </div>
       <div class="form-group">
-        <input placeholder="YYYY-MM-DD" class="option-label" ngModel name="arrivalDate">
+        <input placeholder="YYYY-MM-DD" class="option-label" ngModel type="date"  name="arrivalDate">
       </div>
       <div class="form-group">
         <input placeholder="Duration" class="option-label" ngModel name="Duration">
       </div>
       <div class="form-group">
-        <input placeholder="Prive" class="option-label" ngModel name="price">
+        <input placeholder="Price" class="option-label" ngModel name="price">
       </div>
       <div style="width:100%;text-align:center">
         <a class="registerbutton" type="submit" (click)="addTrip(userForm)">Add Trip</a>

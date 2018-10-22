@@ -32,7 +32,7 @@ const routes = [ {path: 'addairport', component: AddAirportComponent},
 {path: '', redirectTo: '/landingplanner', pathMatch: 'full'},
 {path: '**', redirectTo: '/search', pathMatch: 'full'}
 ];
-
+  
 
 
 @NgModule({

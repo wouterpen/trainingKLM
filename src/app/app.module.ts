@@ -20,6 +20,7 @@ import { AddTripComponent } from './add-trip/add-trip.component';
 import { AddPlaneComponent } from './add-plane/add-plane.component';
 import { PaymentComponent } from './payment/payment.component';
 import { BookingconfirmedComponent } from './bookingconfirmed/bookingconfirmed.component';
+import { SearchFlightComponent } from './search-flight/search-flight.component';
 
 @NgModule({
   declarations: [
@@ -35,7 +36,8 @@ import { BookingconfirmedComponent } from './bookingconfirmed/bookingconfirmed.c
     AddTripComponent,
     AddPlaneComponent,
     PaymentComponent,
-    BookingconfirmedComponent
+    BookingconfirmedComponent,
+    SearchFlightComponent
   ],
   imports: [
     BrowserModule,
