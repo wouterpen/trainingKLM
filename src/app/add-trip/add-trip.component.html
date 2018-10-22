@@ -1,13 +1,42 @@
 <div class="container">
-  <h1>Register TRIP </h1>
-  <form class="add-trip-form" #tripForm="ngForm">
-    <div class="form-group">
-      <label>Traject: </label>
-      <select class="option-label" [(ngModel)]='originSelected' name="traject">
-        <option name="traject" *ngFor="let flight of flights"> {{flight.departureAirport.name}} - {{flight.arrivalAirport.name}} </option>
-      </select>
+  <app-landing-admin></app-landing-admin>
+  <div class="div-style"> <br>
+    <div class="title">
+      Register Trip <br><br>
     </div>
-
-    <button type="submit" (click)="addTrip(tripForm)">Submit Flight</button>
-  </form>
+    <form class="add-trip-form" #userForm="ngForm">
+      <div class="form-group">
+        <label>traject: </label>
+        <select class="option-label" [(ngModel)]='flightsSelected' name="traject">
+          <option name="traject" value='{{flight.departureAirport| json}}*{{flight.arrivalAirport| json}}*{{flight.inactiveStartdate}}*{{flight.inactiveEnddate}}' *ngFor="let flight of flights">
+            {{flight.departureAirport.name}} - {{flight.arrivalAirport.name}} </option>
+        </select><br><br>
+      </div>
+      <div class="form-group">
+        <label>plane: </label>
+        <select class="option-label" [(ngModel)]='planeSelected' name="plane">
+          <option name="plane" value={{plane.id}} *ngFor="let plane of planes"> {{plane.brand}} </option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label>departure date:</label>
+        <input placeholder="YYYY-MM-DD" class="option-label" ngModel name="departureDate"><br>
+      </div>
+      <div class="form-group">
+        <label>arrival date:</label>
+        <input placeholder="YYYY-MM-DD" class="option-label" ngModel name="arrivalDate">
+      </div><br><br>
+      <div class="form-group">
+        <label>Duration:</label>
+        <input placeholder="Duration" class="option-label" ngModel name="Duration"><br>
+      </div>
+      <div class="form-group">
+        <label>Price:</label>
+        <input placeholder="Prive" class="option-label" ngModel name="price">
+      </div><br><br>
+      <a class="registerbutton" type="submit" (click)="addTrip(userForm)">Submit Trip</a><br><br>
+    </form>
+  </div>
 </div>
+
+

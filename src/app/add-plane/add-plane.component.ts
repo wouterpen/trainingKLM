@@ -24,6 +24,4 @@ export class AddPlaneComponent implements OnInit {
       data => console.log('data',data)
     )
   }
-
-
 }
