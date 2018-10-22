@@ -11,26 +11,23 @@ const httpOptions = {
 @Injectable({
   providedIn: 'root'
 })
-export class PlaneServiceService {
-  private url = 'http://localhost:8082/api';
-  private endpointPlanes = 'planes';
-  private endpointAddPlanes = 'planes';
-
+export class TripServiceService {
+  private url = 'http://localhost:8082/api/trips';
 
   constructor(private httpClient: HttpClient) { }
   
-  getPlanes(): Observable<{ any }[]> {
+  getTrips(): Observable<{ any }[]> {
     return this
       .httpClient
-      .get<any[]>(`${this.url}/${this.endpointPlanes}`);
+      .get<any[]>(`${this.url}`);
   }
 
-  addAircraft(nameAircraft: any) {
+  addTrip(nameTrip: any) {
     return this
       .httpClient
       .post<any>(
-        `${this.url}/${this.endpointAddPlanes}`,
-        nameAircraft,
+        `${this.url}`,
+        nameTrip,
         httpOptions
       );
   }

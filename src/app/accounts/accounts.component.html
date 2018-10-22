@@ -1,0 +1,21 @@
+<div class="container">
+  <div class="form">
+    <p class="title">Register User </p>
+    <form class="add-traject-form" #userForm="ngForm" style="margin-bottom:20px;">
+      <div class="form-group">
+        <input  placeholder="First name" ngModel name="firstName">
+        <input  placeholder="Last name" ngModel name="lastName">
+        <input  placeholder="Country" ngModel name="country">
+        <input  placeholder="City" ngModel name="city">
+        <input  placeholder="Street name" ngModel name="streetName">
+        <input  placeholder="Street number" ngModel name="streetNr">
+        <input  placeholder="Postal Code" ngModel name="postalCode">
+        <input  placeholder="Document Number" ngModel name="documentNr">
+        <input  placeholder="Phone Number" ngModel name="phoneNr">
+        <input  placeholder="Email" ngModel name="emailAdress">
+        <input  placeholder="Password" type = 'password' ngModel name="passWord">
+      </div>
+    </form>
+    <a type="submit" (click)="addUser(userForm)">Add user</a>
+    </div>
+  </div>

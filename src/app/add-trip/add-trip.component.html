@@ -1,40 +1,36 @@
 <div class="container">
-  <app-landing-admin></app-landing-admin>
-  <div class="div-style"> <br>
+  <div class="div-style">
     <div class="title">
-      Register Trip <br><br>
+      Register Trip
     </div>
     <form class="add-trip-form" #userForm="ngForm">
       <div class="form-group">
-        <label>traject: </label>
         <select class="option-label" [(ngModel)]='flightsSelected' name="traject">
           <option name="traject" value='{{flight.departureAirport| json}}*{{flight.arrivalAirport| json}}*{{flight.inactiveStartdate}}*{{flight.inactiveEnddate}}' *ngFor="let flight of flights">
             {{flight.departureAirport.name}} - {{flight.arrivalAirport.name}} </option>
-        </select><br><br>
+        </select>
       </div>
       <div class="form-group">
-        <label>plane: </label>
         <select class="option-label" [(ngModel)]='planeSelected' name="plane">
           <option name="plane" value={{plane.id}} *ngFor="let plane of planes"> {{plane.brand}} </option>
         </select>
       </div>
       <div class="form-group">
-        <label>departure date:</label>
-        <input placeholder="YYYY-MM-DD" class="option-label" ngModel name="departureDate"><br>
+        <input placeholder="YYYY-MM-DD" class="option-label" ngModel name="departureDate">
       </div>
       <div class="form-group">
-        <label>arrival date:</label>
         <input placeholder="YYYY-MM-DD" class="option-label" ngModel name="arrivalDate">
-      </div><br><br>
-      <div class="form-group">
-        <label>Duration:</label>
-        <input placeholder="Duration" class="option-label" ngModel name="Duration"><br>
       </div>
       <div class="form-group">
-        <label>Price:</label>
+        <input placeholder="Duration" class="option-label" ngModel name="Duration">
+      </div>
+      <div class="form-group">
         <input placeholder="Prive" class="option-label" ngModel name="price">
-      </div><br><br>
-      <a class="registerbutton" type="submit" (click)="addTrip(userForm)">Submit Trip</a><br><br>
+      </div>
+      <div style="width:100%;text-align:center">
+          <a class="registerbutton" type="submit" (click)="addTrip(userForm)">Add Trip</a>
+          <span><a routerLink="/landingplanner" class="registerbutton">Back</a></span> 
+        </div>
     </form>
   </div>
 </div>

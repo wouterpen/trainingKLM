@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Observable, of } from 'rxjs';
-
+import { Account } from '../domain/account.model';
 
 const httpOptions = {
   headers: new HttpHeaders({ 'Content-Type': 'application/json' })
@@ -11,27 +11,30 @@ const httpOptions = {
 @Injectable({
   providedIn: 'root'
 })
-export class PlaneServiceService {
+export class AccountServiceService {
+
   private url = 'http://localhost:8082/api';
-  private endpointPlanes = 'planes';
-  private endpointAddPlanes = 'planes';
+  private endpointUser = 'accounts';
+  private endpointUserAdd = 'accounts';
 
 
   constructor(private httpClient: HttpClient) { }
-  
-  getPlanes(): Observable<{ any }[]> {
+
+  getAccounts(): Observable<{ any }[]> {
     return this
       .httpClient
-      .get<any[]>(`${this.url}/${this.endpointPlanes}`);
+      .get<any[]>(`${this.url}/${this.endpointUser}`);
   }
 
-  addAircraft(nameAircraft: any) {
+
+  addUser(infoUser: any) {
     return this
       .httpClient
       .post<any>(
-        `${this.url}/${this.endpointAddPlanes}`,
-        nameAircraft,
+        `${this.url}/${this.endpointUserAdd}`,
+        infoUser,
         httpOptions
       );
   }
+
 }
