@@ -21,17 +21,28 @@ export class AddTrajectComponent implements OnInit {
     private originSelected: number;
     private destinationSelected: number;
 
-  airports = [];
+  airportsOrigin = [];
+  airportDestination =[];
 
   ngOnInit() {
-    this.originSelected = 1;
-    this.destinationSelected = 2;
-
+    this.originSelected = 0;
+    this.destinationSelected = 0;
     this.airportService.getAirports().subscribe(
       data => {
-        this.airports = data;
+        this.airportsOrigin = [...data];
+        this.airportDestination = [...data];
+        this.airportsOrigin.unshift({
+          name: 'choose origin',
+          id: 0
+        })
+        this.airportDestination.unshift({
+          name: 'choose destination',
+          id: 0 
+        })
       });
+   
   }
+
 
   addFlight(userForm) {
     const flightAddForm = {
@@ -40,10 +51,7 @@ export class AddTrajectComponent implements OnInit {
       'inactiveStartdate': userForm.value.inactiveStartdate,
       'inactiveEnddate': userForm.value.inactiveEnddate
     };
-    this.flightService.addFlight(flightAddForm)
-    .subscribe(
-      data => console.log(data)
-    );
+    this.flightService.addFlight(flightAddForm).subscribe();
     alert("Succesfully registered the traject.")
     this.router.navigate(['/landingplanner']);
     window.location.reload();

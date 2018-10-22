@@ -65,11 +65,8 @@ export class LandingPlannerComponent implements OnInit {
     this.flightService.getFlights().subscribe(
       data => {
         this.flights = data;
-        console.log(data);
       }
     )
-
     this.trips = this.dataService.get();
-    console.log('TRIPS= ',this.trips)
   }
 }

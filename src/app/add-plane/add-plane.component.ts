@@ -24,9 +24,8 @@ export class AddPlaneComponent implements OnInit {
       'capacity' : aircraftForm.value.capacity
     }
     this.planeService.addAircraft(aircraftAddForm).subscribe(
-      data => console.log('data',data)
+      data => alert("Succesfully registered the airplane.")
     )
-    alert("Succesfully registered the airplane.")
     this.router.navigate(['/landingadmin']);
   }
 }

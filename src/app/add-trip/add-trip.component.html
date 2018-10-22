@@ -3,7 +3,7 @@
     <p class="title">Register trip</p>
     <form class="add-trip-form" #userForm="ngForm">
       <div class="form-group">
-        <select class="option-label" [(ngModel)]='flightsSelected' name="traject">
+        <select class="option-label" [(ngModel)]='originSelected' name="traject">
           <option name="traject" value='{{flight.departureAirport| json}}*{{flight.arrivalAirport| json}}*{{flight.inactiveStartdate}}*{{flight.inactiveEnddate}}'
             *ngFor="let flight of flights">
             {{flight.departureAirport.name}} - {{flight.arrivalAirport.name}} </option>
@@ -11,20 +11,20 @@
       </div>
       <div class="form-group">
         <select class="option-label" [(ngModel)]='planeSelected' name="plane">
-          <option name="plane" value={{plane.id}} *ngFor="let plane of planes"> {{plane.name}} </option>
+          <option name="plane" value={{plane.id}} *ngFor="let plane of planes"> {{plane.brand}} </option>
         </select>
       </div>
       <div class="form-group">
-        <input placeholder="YYYY-MM-DD" class="option-label" ngModel type="date" name="departureDate">
+        <input placeholder="YYYY-MM-DD"  ngModel type="date" name="departureDate">
       </div>
       <div class="form-group">
-        <input placeholder="YYYY-MM-DD" class="option-label" ngModel type="date"  name="arrivalDate">
+        <input placeholder="YYYY-MM-DD"  ngModel type="date"  name="arrivalDate">
       </div>
       <div class="form-group">
-        <input placeholder="Duration" class="option-label" ngModel name="Duration">
+        <input placeholder="Duration"  ngModel name="Duration">
       </div>
       <div class="form-group">
-        <input placeholder="Price" class="option-label" ngModel name="price">
+        <input placeholder="Price"  ngModel name="price">
       </div>
       <div style="width:100%;text-align:center">
         <a class="registerbutton" type="submit" (click)="addTrip(userForm)">Add Trip</a>

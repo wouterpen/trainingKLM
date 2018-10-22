@@ -17,20 +17,39 @@ export class AddTripComponent implements OnInit {
     private planeService: PlaneServiceService,
     private dataService: DataServiceService,
     private router: Router) { }
+
+    private planeSelected: number;
   
   flights = [];
   planes = [];
 
   ngOnInit() {
+    this.planeSelected = 0;
+
     this.flightService.getFlights().subscribe(
       data => {
-        this.flights = data;
+        this.flights = [...data];
+        this.flights.unshift({
+          departureAirport: { name: 'choose origin',
+          id: 0},
+          arrivalAirport:{ name: 'choose destination',
+          id: 0},
+          inactiveStartdate: '',
+          inactiveEnddate: '',
+        })
+
       })
     
     this.planeService.getPlanes().subscribe(
       data => {
-        this.planes = data;
+        this.planes = [...data];
+        this.planes.unshift({
+          brand: 'choose plane',
+          id: 0
+        })
       });
+
+      
   }
   addTrip(userForm){
     const arrayDepartureAndArrival =  userForm.value.traject.split("*");

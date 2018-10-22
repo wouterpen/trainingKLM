@@ -42,6 +42,22 @@ input{
     border-radius: 5px;
     margin-left: 25%;
 }
+
+.option-label{
+    margin-top:5px;
+    padding:8px;
+    display:block;
+    border:none;
+    width:53%;
+    height: 30px;
+    background-color: #FFFFFF;
+    border-width: 2px;
+    border-color: #00A1E4;
+    border-style: solid;
+    border-radius: 5px;
+    margin-left: 25%;
+}
+
 ::placeholder {
     color: #00618A;
 }
