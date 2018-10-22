@@ -12,6 +12,9 @@ import { AddTripComponent } from './add-trip/add-trip.component';
 import { BookflightComponent } from './bookflight/bookflight.component';
 import { AddPlaneComponent } from './add-plane/add-plane.component';
 
+import { LandingCustomerComponent } from './landing-customer/landing-customer.component';
+
+
 const routes = [ {path: 'addairport', component: AddAirportComponent},
 {path: 'login', component: LoginComponent},
 // {path: 'search', component: SearchComponent},
@@ -20,9 +23,11 @@ const routes = [ {path: 'addairport', component: AddAirportComponent},
 {path: 'addairport', component: AddAirportComponent},
 {path: 'landingadmin', component: LandingAdminComponent },
 {path: 'landingplanner', component: LandingPlannerComponent },
+{path: 'landingcustomer', component: LandingCustomerComponent},
 {path: 'addairplane', component: AddPlaneComponent},
 {path: 'addtrip', component: AddTripComponent},
 {path: 'bookflight', component: BookflightComponent},
+
 
 // {path: 'nav2', component: AppComponent},
 {path: '', redirectTo: '/landingplanner', pathMatch: 'full'},

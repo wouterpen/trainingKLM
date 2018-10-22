@@ -13,7 +13,7 @@ const httpOptions = {
 })
 export class PassengerServiceService {
   private url: string = "http://localhost:8082/api";
-  private endpointPassengers: string = "airtraffic/passengers";
+  private endpointPassengers: string = "passengers";
 
 
 
