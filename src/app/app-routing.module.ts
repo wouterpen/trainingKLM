@@ -11,10 +11,10 @@ import { LandingPlannerComponent } from './landing-planner/landing-planner.compo
 import { AddTripComponent } from './add-trip/add-trip.component';
 import { BookflightComponent } from './bookflight/bookflight.component';
 import { AddPlaneComponent } from './add-plane/add-plane.component';
+import { SearchFlightComponent } from './search-flight/search-flight.component';
 
 const routes = [ {path: 'addairport', component: AddAirportComponent},
 {path: 'login', component: LoginComponent},
-// {path: 'search', component: SearchComponent},
 {path: 'addtraject', component: AddTrajectComponent},
 {path: 'adduser', component: AccountsComponent},
 {path: 'addairport', component: AddAirportComponent},
@@ -23,8 +23,7 @@ const routes = [ {path: 'addairport', component: AddAirportComponent},
 {path: 'addairplane', component: AddPlaneComponent},
 {path: 'addtrip', component: AddTripComponent},
 {path: 'bookflight', component: BookflightComponent},
-
-// {path: 'nav2', component: AppComponent},
+{path: 'search', component: SearchFlightComponent},
 {path: '', redirectTo: '/landingplanner', pathMatch: 'full'},
 {path: '**', redirectTo: '/search', pathMatch: 'full'}
 ];

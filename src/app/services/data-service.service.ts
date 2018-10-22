@@ -12,7 +12,6 @@ export class DataServiceService {
 
   add(event: object){
     this.trips.push(event);
-    console.log(this.trips);
   };
 
   get(): object[]{

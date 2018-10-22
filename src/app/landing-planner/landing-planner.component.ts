@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FlightServiceService } from '../services/flight-service.service';
-import { DataServiceService } from '../data-service.service';
+import { DataServiceService } from '../services/data-service.service';
 
 @Component({
   selector: 'app-landing-planner',
@@ -65,11 +65,8 @@ export class LandingPlannerComponent implements OnInit {
     this.flightService.getFlights().subscribe(
       data => {
         this.flights = data;
-        console.log(data);
       }
     )
-
     this.trips = this.dataService.get();
-    console.log('TRIPS= ',this.trips)
   }
 }

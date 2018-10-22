@@ -37,8 +37,6 @@ export class AccountsComponent implements OnInit {
       'type':"customer"
     };
 
-    this.accountService.addUser(userAddForm).subscribe(
-      data => console.log('data', data)
-    );
+    this.accountService.addUser(userAddForm).subscribe();
   }
 }
