@@ -6,7 +6,8 @@
     <form class="add-trip-form" #userForm="ngForm">
       <div class="form-group">
         <select class="option-label" [(ngModel)]='flightsSelected' name="traject">
-          <option name="traject" value='{{flight.departureAirport| json}}*{{flight.arrivalAirport| json}}*{{flight.inactiveStartdate}}*{{flight.inactiveEnddate}}' *ngFor="let flight of flights">
+          <option name="traject" value='{{flight.departureAirport| json}}*{{flight.arrivalAirport| json}}*{{flight.inactiveStartdate}}*{{flight.inactiveEnddate}}'
+            *ngFor="let flight of flights">
             {{flight.departureAirport.name}} - {{flight.arrivalAirport.name}} </option>
         </select>
       </div>
@@ -28,9 +29,9 @@
         <input placeholder="Prive" class="option-label" ngModel name="price">
       </div>
       <div style="width:100%;text-align:center">
-          <a class="registerbutton" type="submit" (click)="addTrip(userForm)">Add Trip</a>
-          <span><a routerLink="/landingplanner" class="registerbutton">Back</a></span> 
-        </div>
+        <a class="registerbutton" type="submit" (click)="addTrip(userForm)">Add Trip</a>
+        <span><a routerLink="/landingplanner" class="registerbutton">Back</a></span>
+      </div>
     </form>
   </div>
 </div>
