@@ -20,7 +20,6 @@ export class AddTrajectComponent implements OnInit {
 
     private originSelected: number;
     private destinationSelected: number;
-    // private passengerService: PassengerServiceService)
 
   airports = [];
 

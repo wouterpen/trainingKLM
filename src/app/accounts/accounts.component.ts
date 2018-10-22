@@ -41,21 +41,4 @@ export class AccountsComponent implements OnInit {
       data => console.log('data', data)
     );
   }
-
-  // onSubmit(accountForm: NgForm) {
-  //   console.log(accountForm);
-  // }
-
-
-// add(accountForm) {
-//   const flightAddForm = {
-//     'duration': userForm.value.duration,
-//     'origin': {
-//       'id': userForm.value.origin,
-//     },
-//     'destination': {
-//       'id': userForm.value.Destination,
-//     }
-//   }
-
 }

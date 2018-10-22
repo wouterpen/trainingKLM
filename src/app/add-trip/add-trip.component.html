@@ -1,40 +1,39 @@
 <div class="container">
   <div class="div-style">
-    <p class="title">Register Trip</p>
-    <form class="add-traject-form" #userForm="ngForm">
-
-      <!-- traject -->
+    <div class="title">
+      Register Trip
+    </div>
+    <form class="add-trip-form" #userForm="ngForm">
       <div class="form-group">
-        <label>Trajects: </label>
-        <select class="option-label" [(ngModel)]='traject' name="traject">
-          <option name="traject" *ngFor="let flight of flights"> {{flight.departureAirport.name}} - {{flight.arrivalAirport.name}} </option>
+        <select class="option-label" [(ngModel)]='flightsSelected' name="traject">
+          <option name="traject" value='{{flight.departureAirport| json}}*{{flight.arrivalAirport| json}}*{{flight.inactiveStartdate}}*{{flight.inactiveEnddate}}'
+            *ngFor="let flight of flights">
+            {{flight.departureAirport.name}} - {{flight.arrivalAirport.name}} </option>
         </select>
       </div>
-
-      <!-- airplane ID -->
       <div class="form-group">
-        <label>Airplanes: </label>
-        <select class="option-label" [(ngModel)]='plane' name="plane">
-          <option name="plane" *ngFor="let plane of planes"> {{plane.name}}
-          </option>
+        <select class="option-label" [(ngModel)]='planeSelected' name="plane">
+          <option name="plane" value={{plane.id}} *ngFor="let plane of planes"> {{plane.brand}} </option>
         </select>
       </div>
-
-      <!-- duration -->
       <div class="form-group">
-          <input  placeholder="Duration (hh:mm:ss)" ngModel name="duration">
+        <input placeholder="YYYY-MM-DD" class="option-label" ngModel name="departureDate">
       </div>
-
-      <!-- price (not present in DB yet) -->
-      <!-- <div class="form-group">
-          <input  placeholder="Price in €0" ngModel name="price">
-      </div> -->
-
-      <!-- DATES? -->
-      <a class="registerbutton" type="submit" (click)="addTrip(userForm)">Submit Trip</a>
-      <span><a routerLink="/landingplanner" class="registerbutton" type="submit">Back</a></span>
-
+      <div class="form-group">
+        <input placeholder="YYYY-MM-DD" class="option-label" ngModel name="arrivalDate">
+      </div>
+      <div class="form-group">
+        <input placeholder="Duration" class="option-label" ngModel name="Duration">
+      </div>
+      <div class="form-group">
+        <input placeholder="Prive" class="option-label" ngModel name="price">
+      </div>
+      <div style="width:100%;text-align:center">
+        <a class="registerbutton" type="submit" (click)="addTrip(userForm)">Add Trip</a>
+        <span><a routerLink="/landingplanner" class="registerbutton">Back</a></span>
+      </div>
     </form>
   </div>
-</div>
- 
+</div>
+
+

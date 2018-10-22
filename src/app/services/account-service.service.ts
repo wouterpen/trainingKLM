@@ -12,9 +12,6 @@ const httpOptions = {
   providedIn: 'root'
 })
 export class AccountServiceService {
-  // private url = 'http://localhost:8082/api';
-  // private endpoint  = 'accounts';
-  // loginAccount =  {id : 1};
 
   private url = 'http://localhost:8082/api';
   private endpointUser = 'accounts';
@@ -22,12 +19,6 @@ export class AccountServiceService {
 
 
   constructor(private httpClient: HttpClient) { }
-
-  // getById(id: number): Observable<Account> {
-  //   return this
-  //     .httpClient
-  //     .get<Account>(`${this.url}/${this.endpoint}/` + id);
-  // }
 
   getAccounts(): Observable<{ any }[]> {
     return this

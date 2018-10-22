@@ -16,8 +16,7 @@ export class AddPlaneComponent implements OnInit {
 
   ngOnInit() {
   }
-
-
+  
   addAircraft(aircraftForm) {
     const aircraftAddForm = {
       'name': aircraftForm.value.name,
@@ -30,6 +29,4 @@ export class AddPlaneComponent implements OnInit {
     alert("Succesfully registered the airplane.")
     this.router.navigate(['/landingadmin']);
   }
-
-  
 }
