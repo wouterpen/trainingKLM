@@ -17,6 +17,7 @@ import { SearchFlightComponent } from './search-flight/search-flight.component';
 import { SearchResultsComponent } from './search-results/search-results.component';
 import { DetailsComponent } from './details/details.component';
 import { LandingCustomerComponent } from './landing-customer/landing-customer.component';
+import { LoadingScreenComponent } from './loading-screen/loading-screen.component';
 
 
 const routes = [ {path: 'addairport', component: AddAirportComponent},
@@ -35,6 +36,7 @@ const routes = [ {path: 'addairport', component: AddAirportComponent},
 {path: 'search', component: SearchFlightComponent},
 {path: 'searchresults', component: SearchResultsComponent},
 {path: 'details', component: DetailsComponent},
+{path: 'loading', component: LoadingScreenComponent},
 {path: '', redirectTo: '/landingplanner', pathMatch: 'full'},
 {path: '', redirectTo: '/search', pathMatch: 'full'},
 {path: '**', redirectTo: '/search', pathMatch: 'full'}
