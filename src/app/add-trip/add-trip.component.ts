@@ -65,6 +65,7 @@ export class AddTripComponent implements OnInit {
       price: userForm.value.price
     };
     this.dataService.add(addTripForm);
+    
     this.router.navigate(['/landingplanner']);
   }
 }
