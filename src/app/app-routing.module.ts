@@ -18,6 +18,9 @@ import { SearchFlightComponent } from './search-flight/search-flight.component';
 import { SearchResultsComponent } from './search-results/search-results.component';
 import { DetailsComponent } from './details/details.component';
 
+import { LandingCustomerComponent } from './landing-customer/landing-customer.component';
+
+
 const routes = [ {path: 'addairport', component: AddAirportComponent},
 {path: 'login', component: LoginComponent},
 {path: 'addtraject', component: AddTrajectComponent},
@@ -25,6 +28,7 @@ const routes = [ {path: 'addairport', component: AddAirportComponent},
 {path: 'addairport', component: AddAirportComponent},
 {path: 'landingadmin', component: LandingAdminComponent },
 {path: 'landingplanner', component: LandingPlannerComponent },
+{path: 'landingcustomer', component: LandingCustomerComponent},
 {path: 'addairplane', component: AddPlaneComponent},
 {path: 'addtrip', component: AddTripComponent},
 {path: 'bookflight', component: BookflightComponent},
@@ -34,7 +38,13 @@ const routes = [ {path: 'addairport', component: AddAirportComponent},
 {path: 'searchresults', component: SearchResultsComponent},
 {path: 'details', component: DetailsComponent},
 
+<<<<<<< HEAD
+
+// {path: 'nav2', component: AppComponent},
+{path: '', redirectTo: '/landingplanner', pathMatch: 'full'},
+=======
 {path: '', redirectTo: '/search', pathMatch: 'full'},
+>>>>>>> master
 {path: '**', redirectTo: '/search', pathMatch: 'full'}
 ];
 

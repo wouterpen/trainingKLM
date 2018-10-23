@@ -45,7 +45,7 @@ export class LoginComponent implements OnInit {
                   this.router.navigate(['/landingplanner']);
                   return;
                 case "customer":
-                  this.router.navigate(['/landingadmin']); //Doesn't exist yet
+                  this.router.navigate(['/landingcustomer']); //Doesn't exist yet
                   return;
               }
             }
