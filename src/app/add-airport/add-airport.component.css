@@ -10,7 +10,8 @@
 	top:50%;
 	left:50%;
 	margin-left:-300px;
-	margin-top:-250px;
+    margin-top:-250px;
+    opacity: 0.85;
 }
 	
 .div-style a{
