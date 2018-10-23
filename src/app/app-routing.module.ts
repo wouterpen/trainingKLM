@@ -13,11 +13,9 @@ import { BookflightComponent } from './bookflight/bookflight.component';
 import { AddPlaneComponent } from './add-plane/add-plane.component';
 import { PaymentComponent } from './payment/payment.component';
 import { BookingconfirmedComponent } from './bookingconfirmed/bookingconfirmed.component';
-
 import { SearchFlightComponent } from './search-flight/search-flight.component';
 import { SearchResultsComponent } from './search-results/search-results.component';
 import { DetailsComponent } from './details/details.component';
-
 import { LandingCustomerComponent } from './landing-customer/landing-customer.component';
 
 
@@ -37,14 +35,8 @@ const routes = [ {path: 'addairport', component: AddAirportComponent},
 {path: 'search', component: SearchFlightComponent},
 {path: 'searchresults', component: SearchResultsComponent},
 {path: 'details', component: DetailsComponent},
-
-<<<<<<< HEAD
-
-// {path: 'nav2', component: AppComponent},
 {path: '', redirectTo: '/landingplanner', pathMatch: 'full'},
-=======
 {path: '', redirectTo: '/search', pathMatch: 'full'},
->>>>>>> master
 {path: '**', redirectTo: '/search', pathMatch: 'full'}
 ];
 

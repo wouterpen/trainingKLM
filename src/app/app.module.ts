@@ -10,7 +10,6 @@ import { BookflightComponent } from './bookflight/bookflight.component';
 import { HttpClientModule } from '@angular/common/http';
 import { AddTrajectComponent } from './add-traject/add-traject.component';
 import { AddAirportComponent } from './add-airport/add-airport.component';
-
 import { NavigationComponent } from './navigation/navigation.component';
 import { AccountsComponent } from './accounts/accounts.component';
 import { AccountServiceService } from './services/account-service.service';
@@ -21,13 +20,10 @@ import { AddPlaneComponent } from './add-plane/add-plane.component';
 import { PaymentComponent } from './payment/payment.component';
 import { BookingconfirmedComponent } from './bookingconfirmed/bookingconfirmed.component';
 import { SearchFlightComponent } from './search-flight/search-flight.component';
-<<<<<<< HEAD
 import { LandingCustomerComponent } from './landing-customer/landing-customer.component';
-
-=======
 import { SearchResultsComponent } from './search-results/search-results.component';
 import { DetailsComponent } from './details/details.component';
->>>>>>> master
+import { FooterComponent } from './footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -42,17 +38,15 @@ import { DetailsComponent } from './details/details.component';
     LandingPlannerComponent,
     AddTripComponent,
     AddPlaneComponent,
-<<<<<<< HEAD
     SearchFlightComponent,
     LandingCustomerComponent,
-
-=======
     PaymentComponent,
     BookingconfirmedComponent,
     SearchFlightComponent,
     SearchResultsComponent,
+    DetailsComponent,
+    FooterComponent,
     DetailsComponent
->>>>>>> master
   ],
   imports: [
     BrowserModule,
