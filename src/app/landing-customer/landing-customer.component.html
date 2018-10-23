@@ -1,0 +1,29 @@
+<div class="container">
+    <div class="landingPage">
+      <p class="title">Welcome {{passengerData.name}}!</p>
+      <div class="tableHead">
+        <tr>
+          <!-- Links need to be verified -->
+          <th><p class="title2">Your user information</p></th>
+          <th><p class="title2">Booked flights</p></th>
+        </tr>
+      </div>
+  
+      <div class="list">
+        <nav>
+            <ul>
+                <li>Id: {{passengerData.id}} </li>
+                <li>Name: {{passengerData.name}}</li>
+            </ul>
+        </nav>
+      </div>
+  
+      <div class="list">
+          <nav>
+              <ul>
+                  <li >{{passengerData.trips}}</li>
+              </ul>
+          </nav>
+        </div>
+    </div>
+  </div>
