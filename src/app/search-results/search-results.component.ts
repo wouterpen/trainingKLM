@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { TripServiceService } from '../services/trip-service.service';
 
 @Component({
   selector: 'app-search-results',
@@ -7,8 +8,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SearchResultsComponent implements OnInit {
 
-  constructor() { }
+  constructor(
+    private tripService: TripServiceService
+  ) { }
 
+  trips = [];
   tripsHC = [
     {
       trajectOrigin: {
@@ -55,10 +59,11 @@ export class SearchResultsComponent implements OnInit {
   ];
 
   ngOnInit() {
-  }
-
-  alertButton() {
-    alert("Gelukt");
+    this.tripService.getTrips().subscribe(
+      data => {
+        this.trips = data;
+        console.log(this.trips)
+      })   
   }
 
 }

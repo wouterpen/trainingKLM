@@ -6,26 +6,6 @@
     <div class="list">
         <nav>
             <ul class="listTrips">
-                  <li *ngFor="let trip of trips">
-                    
-                    <table class="searchList">
-                      <tbody>
-                        <tr class="columnNames">
-                          <td>Airplane</td>
-                          <td>Startdate</td>
-                          <td>Enddate</td>
-                          <td>Price</td>
-                        </tr>
-                        <tr>
-                          <td>{{trip.plane}}</td>
-                          <td>{{trip.startDate}}</td>
-                          <td>{{trip.endDate}}</td>
-                          <td>€{{trip.price}}</td>
-                        </tr>
-                      </tbody>
-                    </table>
-                  
-                  </li>
                   <li *ngFor="let trip of tripsHC">
                       <a routerLink="/adduser">
                     <table class="searchList">
@@ -33,8 +13,8 @@
                       <tbody>
                         <tr class="columnNames">
                           <td>Airplane</td>
-                          <td>Startdate</td>
-                          <td>Enddate</td>
+                          <td>Departure date</td>
+                          <td>Return date</td>
                           <td>Price</td>
                         </tr>
                         <tr>

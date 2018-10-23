@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { NgForm } from '@angular/forms';
 import { AccountServiceService } from '../services/account-service.service';
 import { Account } from '../domain/account.model';
+import { Router } from '@angular/router';
+
 
 @Component({
   selector: 'app-accounts',
@@ -14,7 +16,9 @@ export class AccountsComponent implements OnInit {
 
   account: Account = new Account();
 
-  constructor(private accountService: AccountServiceService) { }
+  constructor(
+    private router: Router,
+    private accountService: AccountServiceService) { }
 
   ngOnInit() {
   }
@@ -36,7 +40,11 @@ export class AccountsComponent implements OnInit {
       'password': userForm.value.passWord,
       'type':"customer"
     };
-
+    if (userAddForm.email == "" || userAddForm.password == "") {
+      alert("Please fill in all the necessary details.");
+      return;
+    }
     this.accountService.addUser(userAddForm).subscribe();
+    this.router.navigate(['/details']);
   }
 }
