@@ -37,6 +37,7 @@ export class LoginComponent implements OnInit {
         for (var j = 0; j < this.accounts.length;j++){
           if (this.accounts[j].email == loginForm.value.username && this.accounts[j].password == loginForm.value.password) {
             this.type = this.accounts[j].type;
+            this.accountService.setCurrentCustomer(this.accounts[j]);
               switch(this.type) {
                 case "admin":
                   this.router.navigate(['/landingadmin']);
