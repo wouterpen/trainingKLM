@@ -1,23 +1,24 @@
-<div class="container">
-  <div class="div-style"> <br>
-
-    <div class="title">
-      Register Airplane <br><br>
+<body background='../../assets/NYC.jpg' class="background">
+  <div class="container">
+    <div class="div-style"> <br>
+      <div class="title">
+        Register Airplane <br><br>
+      </div>
+      <form class="add-traject-form" #aircraftForm="ngForm">
+        <div class="form-group">
+          <input placeholder="Name" ngModel name="name"><br><br>
+        </div>
+        <div class="form-group">
+          <input placeholder="Model" ngModel name="model"><br><br>
+        </div>
+        <div class="form-group">
+          <input placeholder="Capacity" ngModel name="capacity"><br><br>
+        </div>
+        <div style="width:100%;text-align:center">
+          <a class="registerbutton" type="submit" (click)="addAircraft(aircraftForm)">Add Airplane</a>
+          <span><a routerLink="/landingadmin" class="registerbutton">Back</a></span>
+        </div>
+      </form>
     </div>
-    <form class="add-traject-form" #aircraftForm="ngForm">
-      <div class="form-group">
-        <input placeholder="Name" ngModel name="name"><br><br>
-      </div>
-      <div class="form-group">
-        <input placeholder="Model" ngModel name="model"><br><br>
-      </div>
-      <div class="form-group">
-        <input placeholder="Capacity" ngModel name="capacity"><br><br>
-      </div>
-      <div style="width:100%;text-align:center">
-        <a class="registerbutton" type="submit" (click)="addAircraft(aircraftForm)">Add Airplane</a>
-        <span><a routerLink="/landingadmin" class="registerbutton">Back</a></span> 
-      </div>
-    </form>
   </div>
-</div>
+</body>

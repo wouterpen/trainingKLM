@@ -1,31 +1,27 @@
-<div class="container">
+<body background='../../assets/beach2.jpg' class="background">
+  <div class="container">
     <div class="div-style">
       <p class="title">Register Traject</p>
-  <form class="add-traject-form" #userForm="ngForm">
-
-    <div class="form-group">
-      <select class="option-label" [(ngModel)]='originSelected' name="departureAirport">
-        <option name="departureAirport" value={{airport.id}} *ngFor="let airport of airportsOrigin">{{airport.name}}</option>
-      </select>
+      <form class="add-traject-form" #userForm="ngForm">
+        <div class="form-group">
+          <select class="option-label" [(ngModel)]='originSelected' name="departureAirport">
+            <option name="departureAirport" value={{airport.id}} *ngFor="let airport of airportsOrigin">{{airport.name}}</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <select class="option-label" [(ngModel)]='destinationSelected' name="arrivalAirport">
+            <option name="arrivalAirport" value={{airport.id}} *ngFor="let airport of airportDestination">{{airport.name}}</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <input placeholder="Start date (YYYY-MM-DD)" ngModel name="inactiveStartdate">
+        </div>
+        <div class="form-group">
+          <input placeholder="End date (YYYY-MM-DD)" ngModel name="inactiveEnddate">
+        </div>
+        <a class="registerbutton" type="submit" (click)="addFlight(userForm)">Submit Flight</a>
+        <span><a routerLink="/landingplanner" class="registerbutton" type="submit">Back</a></span>
+      </form>
     </div>
-
-    <div class="form-group">
-      <select class="option-label" [(ngModel)]='destinationSelected' name="arrivalAirport">
-        <option name="arrivalAirport" value={{airport.id}} *ngFor="let airport of airportDestination">{{airport.name}}</option>
-      </select>
-    </div>
-
-    <div class="form-group">
-      <input placeholder="Start date (YYYY-MM-DD)" ngModel name="inactiveStartdate">
-    </div>
-
-    <div class="form-group">
-        <input placeholder="End date (YYYY-MM-DD)" ngModel name="inactiveEnddate">
-    </div>
-
-    <a class="registerbutton" type="submit" (click)="addFlight(userForm)">Submit Flight</a>
-    <span><a routerLink="/landingplanner" class="registerbutton" type="submit">Back</a></span>
-  </form>
-</div>
-</div>
- 
+  </div>
+</body>

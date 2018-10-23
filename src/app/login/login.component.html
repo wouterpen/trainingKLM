@@ -1,25 +1,22 @@
-<div class="container">
-  <div class="div-style">
-    <div class="avatar">
-      <img class="resize" src="../../assets/avatar2.png" alt="Avatar"> <br><br><br>
-    </div>
-    <form #loginForm="ngForm" (ngSubmit)="onSubmit(loginForm)">
-  
-    <div>
-      <input placeholder="username" type="text" name="username" ngModel> <br><br>
-    </div>
-  
-    <div>
-      <input placeholder="password" type="password" name="password" ngModel> <br>
-    </div>
-  </form>   
-  
-    <!-- <div class="forgotpassword">
-      <a href="">Forgot username/password?</a>
-    </div> -->
+<body background='../../../assets/city.jpg' class="background">
+    <div class="container">
+        <div class="div-style">
+            <div class="avatar">
+                <img class="resize" src="../../assets/avatar2.png" alt="Avatar"> <br><br><br>
+            </div>
+            <form #loginForm="ngForm" (ngSubmit)="onSubmit(loginForm)">
 
-    <div style="width:100%;position:absolute;">
-      <a class="loginbutton" (click)="loginFunction(loginForm)">Login</a>
+                <div>
+                    <input placeholder="username" type="text" name="username" ngModel> <br><br>
+                </div>
+
+                <div>
+                    <input placeholder="password" type="password" name="password" ngModel> <br>
+                </div>
+            </form>
+            <div style="width:100%;position:absolute;">
+                <a class="loginbutton" (click)="loginFunction(loginForm)">Login</a>
+            </div>
+        </div>
     </div>
-  </div>
-</div>
+</body>
