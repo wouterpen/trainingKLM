@@ -2,7 +2,6 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule} from '@angular/forms';
 
-
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './/app-routing.module';
 import { LoginComponent } from './login/login.component';
@@ -10,7 +9,6 @@ import { BookflightComponent } from './bookflight/bookflight.component';
 import { HttpClientModule } from '@angular/common/http';
 import { AddTrajectComponent } from './add-traject/add-traject.component';
 import { AddAirportComponent } from './add-airport/add-airport.component';
-
 import { NavigationComponent } from './navigation/navigation.component';
 import { AccountsComponent } from './accounts/accounts.component';
 import { AccountServiceService } from './services/account-service.service';
@@ -22,10 +20,10 @@ import { PaymentComponent } from './payment/payment.component';
 import { BookingconfirmedComponent } from './bookingconfirmed/bookingconfirmed.component';
 import { SearchFlightComponent } from './search-flight/search-flight.component';
 import { LandingCustomerComponent } from './landing-customer/landing-customer.component';
-
+import { LoadingScreenComponent } from './loading-screen/loading-screen.component';
 import { SearchResultsComponent } from './search-results/search-results.component';
 import { DetailsComponent } from './details/details.component';
-import { LoadingScreenComponent } from './loading-screen/loading-screen.component';
+import { FooterComponent } from './footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -42,13 +40,14 @@ import { LoadingScreenComponent } from './loading-screen/loading-screen.componen
     AddPlaneComponent,
     SearchFlightComponent,
     LandingCustomerComponent,
-
     PaymentComponent,
     BookingconfirmedComponent,
     SearchFlightComponent,
     SearchResultsComponent,
     DetailsComponent,
-    LoadingScreenComponent
+    LoadingScreenComponent,
+    FooterComponent,
+    DetailsComponent
   ],
   imports: [
     BrowserModule,

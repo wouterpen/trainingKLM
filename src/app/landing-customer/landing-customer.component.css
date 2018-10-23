@@ -4,19 +4,8 @@
     text-align: center;
 }
 
-#plannerTable {
-    width: 1000px;
-    margin:auto;
-    /* border: 3px solid #00A1E4;
-    border-radius: 8px;
-    border-collapse: collapse; */
-}
-
 #plannerTable td, th {
     width: 495px;
-    /* border: 3px solid #00A1E4;
-    border-radius: 8px;
-    border-collapse: collapse; */
 }
  
 .addNew {
@@ -27,26 +16,6 @@ ul {
     float:top;
     list-style-type: none;
     margin:0;padding:0;
-}
-
-li {
-    background: rgba(0, 160, 228, 0.185);
-    border-radius: 8px;
-    margin:4px;
-    padding-left:10px;
-    vertical-align: middle;
-    text-align: left;
-    border: 1px solid #00A1E4;
-    height:45px;
-    line-height: 45px;
-    display: inline-block;
-    width:90%;
-
-}
-
-li:hover {
-    background: rgba(0, 160, 228, 0.479);
-    cursor: pointer;
 }
 
 .displayList {
@@ -127,3 +96,19 @@ nav ul{overflow:hidden; overflow-y:scroll;}
     display: inline-block;
     width:50%;
 }
+
+.searchList {text-align:center;width:95%;margin-bottom:10px;border: 1px black;padding: 10px 0px;background-color:rgba(0, 160, 228, 0.534);border-radius:7px;}
+
+.searchList li {height:110px;text-align:center;}
+
+.searchList th {font-size: 1.4em;}
+
+.searchList td {padding:0;margin:0;line-height: 25px;}
+
+.columnNames {font-weight: bold;}
+
+nav ul{overflow:hidden; overflow-y:scroll;}
+
+.customerDetails {text-align:left;margin-left:50px;}
+
+.customerDetails > ul > li {margin-bottom:10px;}

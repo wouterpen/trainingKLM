@@ -4,7 +4,6 @@ body {
  
 .topnav {
   overflow: hidden;
-  background-color: #FFFFFF;
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
   border-radius: 8px;
 }
@@ -13,9 +12,9 @@ body {
   float: right;
   color: #00A1E4;
   text-align: center;
-  padding: 14px 16px;
+  padding: 14px;
   text-decoration: none;
-  font-size: 24px;
+  font-size: 18px;
   border-radius: 8px;
   cursor: pointer;
 }
@@ -34,9 +33,3 @@ body {
   cursor: progress;
 }
  
-.rectangle {
-  height: 3px;
-  width: 100%;
-  margin-top: 5px;
-  background-color: #00A1E4;
-}

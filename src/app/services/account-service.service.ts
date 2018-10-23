@@ -16,6 +16,7 @@ export class AccountServiceService {
   private url = 'http://localhost:8082/api';
   private endpointUser = 'accounts';
   private endpointUserAdd = 'accounts';
+  private currentCustomer: Account;
 
 
   constructor(private httpClient: HttpClient) { }
@@ -35,6 +36,13 @@ export class AccountServiceService {
         infoUser,
         httpOptions
       );
-  }
+  }   
 
+  getCurrentCustomer(): Account {
+    return this.currentCustomer;
+  }
+  
+  setCurrentCustomer(account: Account) {
+    this.currentCustomer = account;
+  }
 }

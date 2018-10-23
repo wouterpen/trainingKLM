@@ -1,6 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { FlightServiceService } from '../services/flight-service.service';
-import { PassengerServiceService } from '../services/passenger-service.service';
+import { AccountServiceService } from '../services/account-service.service';
+import { OrderServiceService } from '../services/order-service.service';
+import { Account } from '../domain/account.model';
+// import { PassengerServiceService } from '../services/passenger-service.service';
 
 
 @Component({
@@ -12,14 +15,16 @@ export class LandingCustomerComponent implements OnInit {
 
   constructor(
     private flightService: FlightServiceService,
-    private PassengerServiceService: PassengerServiceService) { }
+    private accountService: AccountServiceService,
+    private orderService: OrderServiceService,
+    ) { }
 
   flights = [];
-  passengerData = {};
+  orders = [];
+  customerOrders = [];
+  currentCustomer: Account;
+  customerID = 0;
   
- 
-
-
   ngOnInit() {
     this.flightService.getFlights().subscribe(
       flightData => {
@@ -27,15 +32,24 @@ export class LandingCustomerComponent implements OnInit {
         console.log(flightData);
       }
     )
-    this.PassengerServiceService.getPassengers().subscribe(
+
+    this.currentCustomer = this.accountService.getCurrentCustomer();
+    console.log("Current customer: ", this.currentCustomer);
+    this.customerID = this.currentCustomer.id;
+    
+    this.orderService.getOrders().subscribe(
       data => {
-          if (data.length > 0) {
-          this.passengerData = data[0];
-          }else{
-            alert("Cannot find passenger data")
+        this.orders = data;
+        console.log("Orders: ", data);
+        console.log("CustomerID: ", this.currentCustomer.id);
+
+        for (var i = 0; i < 1;i++){
+          if (this.orders[i].account.id == this.currentCustomer.id) {
+            this.customerOrders.push(this.orders[i]);
+            console.log("Customer orders: ",this.customerOrders);
           }
-          console.log(data);
-      }
-    )
+        }
+        }
+      )
   }
 }
