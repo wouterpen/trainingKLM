@@ -31,7 +31,7 @@ export class LandingPlannerComponent implements OnInit {
           id: 3,
           name: "Paris"
       },
-      plane: "Henry",
+      plane: "C2 Hercules",
       startDate: "2018-10-27",
       endDate: "2018-10-28",
       duration: "00:02:45",
@@ -52,7 +52,7 @@ export class LandingPlannerComponent implements OnInit {
           id: 8,
           name: "Madrid"
       },
-      plane: "Henk",
+      plane: "Valcon",
       startDate: "2018-11-01",
       endDate: "2018-11-02",
       duration: "00:04:30",

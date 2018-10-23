@@ -1,52 +1,58 @@
-<div class="container">
+<body background='../../assets/beach2.jpg' class="background">
+  <div class="container">
     <div class="landingPage">
       <p class="title">Welcome {{currentCustomer.firstName}}!</p>
       <div class="tableHead">
         <tr>
-          <th><p class="title2">Your user information</p></th>
-          <th><p class="title2">Booked flights</p></th>
+          <th>
+            <p class="title2">Your user information</p>
+          </th>
+          <th>
+            <p class="title2">Booked flights</p>
+          </th>
         </tr>
       </div>
-  
+
       <div class="list">
-          <nav class="customerDetails">
-              <ul>
-                  <li><b>First name:</b>{{currentCustomer.firstName}} </li>
-                  <li><b>Last name: </b>{{currentCustomer.lastName}}</li>
-                  <li><b>Email: </b>{{currentCustomer.email}}</li>
-                  <li><b>Phone number: </b>{{currentCustomer.phoneNumber}}</li>
-                  <li><b>Country: </b>{{currentCustomer.country}}</li>
-                  <li><b>City: </b>{{currentCustomer.city}}</li>
-                  <li><b>Street: </b>{{currentCustomer.street}}</li>
-                  <li><b>Street number: </b>{{currentCustomer.streetNumber}}</li>
-              </ul>
-          </nav>
+        <nav class="customerDetails">
+          <ul>
+            <li><b>First name:</b>{{currentCustomer.firstName}} </li>
+            <li><b>Last name: </b>{{currentCustomer.lastName}}</li>
+            <li><b>Email: </b>{{currentCustomer.email}}</li>
+            <li><b>Phone number: </b>{{currentCustomer.phoneNumber}}</li>
+            <li><b>Country: </b>{{currentCustomer.country}}</li>
+            <li><b>City: </b>{{currentCustomer.city}}</li>
+            <li><b>Street: </b>{{currentCustomer.street}}</li>
+            <li><b>Street number: </b>{{currentCustomer.streetNumber}}</li>
+          </ul>
+        </nav>
       </div>
-  
+
       <div class="list">
-            <nav>
-                <ul class="listTrips">
-                      <li *ngFor="let order of orders">
-                        <table class="searchList">
-                          <th colspan="4">{{order.trip.origin.name}} - {{order.trip.destination.name}}</th>
-                          <tbody>
-                            <tr class="columnNames">
-                                <td>Luggage</td>
-                                <td>Seat number</td>
-                                <td>Seat type</td>
-                                <td>Price</td>
-                            </tr>
-                            <tr>
-                              <td>{{order.luggage}} kg</td>
-                              <td>{{order.seatNumber}}</td>
-                              <td>{{order.seatType}}</td>
-                              <td>€{{order.paidAmount}}</td>
-                            </tr>
-                          </tbody>
-                        </table>
-                      </li>
-                </ul>
-            </nav>
-          </div>
+        <nav>
+          <ul class="listTrips">
+            <li *ngFor="let order of orders">
+              <table class="searchList">
+                <th colspan="4">{{order.trip.origin.name}} - {{order.trip.destination.name}}</th>
+                <tbody>
+                  <tr class="columnNames">
+                    <td>Luggage</td>
+                    <td>Seat number</td>
+                    <td>Seat type</td>
+                    <td>Price</td>
+                  </tr>
+                  <tr>
+                    <td>{{order.luggage}} kg</td>
+                    <td>{{order.seatNumber}}</td>
+                    <td>{{order.seatType}}</td>
+                    <td>€{{order.paidAmount}}</td>
+                  </tr>
+                </tbody>
+              </table>
+            </li>
+          </ul>
+        </nav>
+      </div>
     </div>
   </div>
+</body>

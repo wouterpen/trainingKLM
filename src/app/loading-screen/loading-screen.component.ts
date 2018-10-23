@@ -16,6 +16,6 @@ export class LoadingScreenComponent implements OnInit {
   ngOnInit() {
         setTimeout(() => {
           this.router.navigate(['searchresults']);
-      }, 6000);  
+      }, 3000);  
   }
 }

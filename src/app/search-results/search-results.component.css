@@ -11,6 +11,7 @@
 	left:50%;
 	margin-left:-400px;
 	margin-top:-300px;
+	opacity: 0.85;
 }   
 
 a {
@@ -72,7 +73,7 @@ li {
 }
 
 li:hover {
-    background-color: rgb(39, 172, 230);
+	background-color: rgb(39, 172, 230, 0.5);
     cursor: pointer;
 }
 
@@ -80,9 +81,19 @@ li:hover {
 
 .searchList li {height:110px;text-align:center;}
 
-.searchList th {font-size: 1.4em;}
+.searchList th {
+	font-size: 1.2em;
+	font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+	color: #00618A;
+}
 
-.searchList td {padding:0;margin:0;line-height: 25px;}
+.searchList td {
+	padding:0;
+	margin:0;
+	line-height: 25px;
+	color: #00A1E4;
+	font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
 
 .columnNames {font-weight: bold;}
 

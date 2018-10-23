@@ -5,6 +5,7 @@ p {
 
 .container{
  width: 100%;
+ height: 55vh;
  text-align: center;
  position:relative;
  margin-top: 20%;

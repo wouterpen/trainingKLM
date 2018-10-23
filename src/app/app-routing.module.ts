@@ -37,7 +37,6 @@ const routes = [ {path: 'addairport', component: AddAirportComponent},
 {path: 'searchresults', component: SearchResultsComponent},
 {path: 'details', component: DetailsComponent},
 {path: 'loading', component: LoadingScreenComponent},
-{path: '', redirectTo: '/landingplanner', pathMatch: 'full'},
 {path: '', redirectTo: '/search', pathMatch: 'full'},
 {path: '**', redirectTo: '/search', pathMatch: 'full'}
 ];
