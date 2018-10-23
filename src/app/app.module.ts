@@ -21,13 +21,11 @@ import { AddPlaneComponent } from './add-plane/add-plane.component';
 import { PaymentComponent } from './payment/payment.component';
 import { BookingconfirmedComponent } from './bookingconfirmed/bookingconfirmed.component';
 import { SearchFlightComponent } from './search-flight/search-flight.component';
-<<<<<<< HEAD
 import { LandingCustomerComponent } from './landing-customer/landing-customer.component';
 
-=======
 import { SearchResultsComponent } from './search-results/search-results.component';
 import { DetailsComponent } from './details/details.component';
->>>>>>> master
+import { LoadingScreenComponent } from './loading-screen/loading-screen.component';
 
 @NgModule({
   declarations: [
@@ -42,17 +40,15 @@ import { DetailsComponent } from './details/details.component';
     LandingPlannerComponent,
     AddTripComponent,
     AddPlaneComponent,
-<<<<<<< HEAD
     SearchFlightComponent,
     LandingCustomerComponent,
 
-=======
     PaymentComponent,
     BookingconfirmedComponent,
     SearchFlightComponent,
     SearchResultsComponent,
-    DetailsComponent
->>>>>>> master
+    DetailsComponent,
+    LoadingScreenComponent
   ],
   imports: [
     BrowserModule,

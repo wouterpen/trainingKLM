@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { AirportServiceService } from '../services/airport-service.service';
+import { Router } from '@angular/router';
+import { NgForm } from '@angular/forms';
 
 @Component({
   selector: 'app-search-flight',
@@ -8,13 +10,15 @@ import { AirportServiceService } from '../services/airport-service.service';
 })
 export class SearchFlightComponent implements OnInit {
 
-  constructor(private airportService : AirportServiceService) { }
+  constructor(
+    private airportService : AirportServiceService,
+    private router: Router) { }
+
   private originSelected: number;
   private destinationSelected: number;
 
   airportsOrigin = [];
   airportDestination =[];
-
 
   ngOnInit() {
     this.originSelected = 0;
@@ -34,16 +38,18 @@ export class SearchFlightComponent implements OnInit {
       });
   }
 
-  selectedFlight(searchForm) {
-    var searchFlightDetails = {
-      'from': searchForm.value.from,
-      'to': searchForm.value.to,
-      'departure' : searchForm.value.departureDate,
-      'return' : searchForm.value.returnDate,
-      'passengers' : searchForm.value.passengers,
+  selectedFlight(searchForm: NgForm) {
+      if(searchForm.value.passengers ===""){
+        alert("Please insert all flight details")
+      }else {
+      var searchFlightDetails = {
+        'from': searchForm.value.from,
+        'to': searchForm.value.to,
+        'departure' : searchForm.value.departureDate,
+        'return' : searchForm.value.returnDate,
+        'passengers' : searchForm.value.passengers,
+      }    
+      this.router.navigate(['/loading']);      
     }
   }
-
-
-
 }
