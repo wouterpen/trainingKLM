@@ -38,13 +38,7 @@ const routes = [ {path: 'addairport', component: AddAirportComponent},
 {path: 'searchresults', component: SearchResultsComponent},
 {path: 'details', component: DetailsComponent},
 
-<<<<<<< HEAD
-
-// {path: 'nav2', component: AppComponent},
-{path: '', redirectTo: '/landingplanner', pathMatch: 'full'},
-=======
 {path: '', redirectTo: '/search', pathMatch: 'full'},
->>>>>>> master
 {path: '**', redirectTo: '/search', pathMatch: 'full'}
 ];
 
