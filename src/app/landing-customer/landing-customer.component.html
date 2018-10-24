@@ -14,18 +14,40 @@
       </div>
 
       <div class="list">
-        <nav class="customerDetails">
-          <ul>
-            <li><b>First name:</b>{{currentCustomer.firstName}} </li>
-            <li><b>Last name: </b>{{currentCustomer.lastName}}</li>
-            <li><b>Email: </b>{{currentCustomer.email}}</li>
-            <li><b>Phone number: </b>{{currentCustomer.phoneNumber}}</li>
-            <li><b>Country: </b>{{currentCustomer.country}}</li>
-            <li><b>City: </b>{{currentCustomer.city}}</li>
-            <li><b>Street: </b>{{currentCustomer.street}}</li>
-            <li><b>Street number: </b>{{currentCustomer.streetNumber}}</li>
-          </ul>
-        </nav>
+        <table id="customerDetailsTable">
+          <tr>
+            <td>First name:</td>
+            <td>{{currentCustomer.firstName}}</td>
+          </tr>
+          <tr>
+            <td>Last name:</td>
+            <td>{{currentCustomer.lastName}}</td>
+          </tr>
+          <tr>
+            <td>Email:</td>
+            <td>{{currentCustomer.email}}</td>
+          </tr>
+          <tr>
+            <td>Phone number:</td>
+            <td>{{currentCustomer.phoneNumber}}</td>
+          </tr>
+          <tr>
+            <td>Country</td>
+            <td>{{currentCustomer.country}}</td>
+          </tr>
+          <tr>
+            <td>City:</td>
+            <td>{{currentCustomer.city}}</td>
+          </tr>
+          <tr>
+            <td>Street:</td>
+            <td>{{currentCustomer.street}}</td>
+          </tr>
+          <tr>
+            <td>Street number:</td>
+            <td>{{currentCustomer.streetNumber}}</td>
+          </tr>
+        </table>
       </div>
 
       <div class="list">
